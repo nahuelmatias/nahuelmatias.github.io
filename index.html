@@ -659,6 +659,37 @@
             margin-top: 0.75rem;
         }
 
+        .egg-toast {
+            position: fixed;
+            left: 50%;
+            bottom: 2rem;
+            transform: translate(-50%, 1rem);
+            width: max-content;
+            max-width: min(calc(100% - 2rem), 480px);
+            padding: 1rem 1.5rem;
+            background: rgba(10, 14, 39, 0.97);
+            border: 1px solid var(--electric-green);
+            border-radius: 0.75rem;
+            box-shadow: 0 0 25px rgba(0, 255, 136, 0.3);
+            color: var(--text-primary);
+            text-align: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            z-index: 2000;
+        }
+
+        .egg-toast.show {
+            opacity: 1;
+            transform: translate(-50%, 0);
+        }
+
+        .egg-toast strong {
+            display: block;
+            color: var(--electric-green);
+            margin-bottom: 0.25rem;
+        }
+
         .course-list strong {
             color: var(--text-primary);
             font-weight: 600;
@@ -993,6 +1024,8 @@
         </section>
     </main>
 
+    <div class="egg-toast" role="status" aria-live="polite"></div>
+
     <footer>
         <div class="container">
             <p>&copy; 2026 Matias Nahuel Araujo. <span data-i18n="footer.rights">All rights reserved.</span></p>
@@ -1087,6 +1120,24 @@
             currentLang = currentLang === 'es' ? 'en' : 'es';
             setLanguage(currentLang);
             try { localStorage.setItem('lang', currentLang); } catch (e) {}
+        });
+
+        // Easter egg: click the profile photo five times in a row
+        const eggToast = document.querySelector('.egg-toast');
+        const eggText = {
+            en: '<strong>🏆 Achievement unlocked</strong>Top of the class, Merit Award and Best GPA... in high school. Nobody asked, but here it is.',
+            es: '<strong>🏆 Logro desbloqueado</strong>Mejor Promedio de la Promoción, Mejor Promedio y Al Mérito... del secundario. Nadie preguntó, pero acá está.'
+        };
+        let eggClicks = 0, eggReset, eggHide;
+        document.querySelector('.profile-img').addEventListener('click', () => {
+            clearTimeout(eggReset);
+            eggReset = setTimeout(() => { eggClicks = 0; }, 1500);
+            if (++eggClicks < 5) return;
+            eggClicks = 0;
+            eggToast.innerHTML = eggText[currentLang];
+            eggToast.classList.add('show');
+            clearTimeout(eggHide);
+            eggHide = setTimeout(() => eggToast.classList.remove('show'), 6000);
         });
 
         // Mobile navigation menu
