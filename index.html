@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matias Nahuel Araujo | Innovation & R&D Specialist</title>
-    <meta name="description" content="Innovation & R&D Specialist - Master in Business & Technology - Cutting-edge Solutions">
+    <title>Matias Nahuel Araujo | Innovation &amp; R&amp;D</title>
+    <meta name="description" content="Matias Nahuel Araujo: Innovation R&amp;D, Electronics Engineer and Master in Business &amp; Technology (Universidad de San Andrés). AI, Blockchain, Computer Vision and emerging technologies.">
     <link rel="canonical" href="https://matiasaraujo.ar/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://matiasaraujo.ar/">
-    <meta property="og:title" content="Matias Nahuel Araujo | Innovation &amp; R&amp;D Specialist">
-    <meta property="og:description" content="Innovation &amp; R&amp;D Specialist. Master in Business &amp; Technology (Universidad de San Andrés). Blockchain, AI, Computer Vision and emerging technologies.">
+    <meta property="og:title" content="Matias Nahuel Araujo | Innovation &amp; R&amp;D">
+    <meta property="og:description" content="Innovation R&amp;D, Electronics Engineer and Master in Business &amp; Technology (Universidad de San Andrés). AI, Blockchain, Computer Vision and emerging technologies.">
     <meta property="og:image" content="https://matiasaraujo.ar/assets/images/profile-photo.jpg">
     <meta property="og:image:width" content="600">
     <meta property="og:image:height" content="600">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Matias Nahuel Araujo | Innovation &amp; R&amp;D Specialist">
-    <meta name="twitter:description" content="Innovation &amp; R&amp;D Specialist. Master in Business &amp; Technology (Universidad de San Andrés).">
+    <meta name="twitter:title" content="Matias Nahuel Araujo | Innovation &amp; R&amp;D">
+    <meta name="twitter:description" content="Innovation R&amp;D, Electronics Engineer and Master in Business &amp; Technology (Universidad de San Andrés).">
     <meta name="twitter:image" content="https://matiasaraujo.ar/assets/images/profile-photo.jpg">
     <meta name="theme-color" content="#0A0E27">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -425,7 +425,277 @@
             border-top: 1px solid rgba(0, 217, 255, 0.2);
         }
 
+        .logo {
+            text-decoration: none;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            order: 3;
+        }
+
+        .lang-toggle {
+            background: none;
+            border: 1px solid rgba(0, 217, 255, 0.4);
+            border-radius: 0.5rem;
+            color: var(--primary-cyan);
+            font: inherit;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            min-width: 44px;
+            height: 36px;
+            padding: 0 0.6rem;
+            cursor: pointer;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .lang-toggle:hover {
+            background: var(--primary-cyan);
+            color: var(--deep-space);
+        }
+
+        .nav-links {
+            margin-left: auto;
+            margin-right: 2rem;
+        }
+
+        .quote-band {
+            padding: 3rem 0;
+            background: var(--deep-space);
+            border-top: 1px solid rgba(0, 217, 255, 0.15);
+            border-bottom: 1px solid rgba(0, 217, 255, 0.15);
+            text-align: center;
+        }
+
+        .quote-band blockquote {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .quote-band i {
+            color: var(--neon-purple);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .quote-band p {
+            font-size: clamp(1.4rem, 3.5vw, 2.1rem);
+            font-weight: 300;
+            font-style: italic;
+            line-height: 1.4;
+            color: var(--text-primary);
+        }
+
+        .experience {
+            background: linear-gradient(135deg, var(--space-gray) 0%, var(--dark-navy) 100%);
+        }
+
+        .timeline {
+            max-width: 850px;
+            margin: 0 auto;
+            border-left: 2px solid rgba(0, 217, 255, 0.3);
+            padding-left: 2rem;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2.5rem;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: calc(-2rem - 8px);
+            top: 0.45rem;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--primary-cyan);
+            box-shadow: 0 0 12px rgba(0, 217, 255, 0.7);
+        }
+
+        .timeline-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 0.5rem 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .timeline-head h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .timeline-date {
+            color: var(--primary-cyan);
+            font-size: 0.9rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .timeline-company {
+            color: var(--text-primary);
+            opacity: 0.85;
+            font-weight: 500;
+            margin-top: 0.15rem;
+        }
+
+        .timeline-item ul {
+            margin-top: 0.75rem;
+            padding-left: 1.1rem;
+            color: var(--text-secondary);
+        }
+
+        .timeline-item li {
+            margin-bottom: 0.35rem;
+        }
+
+        .timeline-item li strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .education {
+            background: linear-gradient(135deg, var(--dark-navy) 0%, var(--deep-space) 100%);
+        }
+
+        .edu-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .edu-card {
+            background: rgba(10, 14, 39, 0.8);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .edu-featured {
+            grid-column: 1 / -1;
+            border-color: rgba(0, 217, 255, 0.5);
+        }
+
+        .edu-head {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .edu-head > i {
+            font-size: 2rem;
+            color: var(--primary-cyan);
+            filter: drop-shadow(0 0 10px rgba(0, 217, 255, 0.5));
+            width: 2.5rem;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .edu-head h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .edu-school {
+            color: var(--text-secondary);
+        }
+
+        .project {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(0, 217, 255, 0.15);
+            color: var(--text-secondary);
+        }
+
+        .project-label {
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--electric-green);
+            margin-bottom: 0.4rem;
+        }
+
+        .project h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project h4 a {
+            color: var(--text-primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--primary-cyan);
+        }
+
+        .project h4 a:hover {
+            color: var(--primary-cyan);
+        }
+
+        .project h4 i {
+            font-size: 0.75em;
+            margin-left: 0.3rem;
+            color: var(--primary-cyan);
+        }
+
+        .course-list {
+            list-style: none;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(0, 217, 255, 0.15);
+            color: var(--text-secondary);
+        }
+
+        .course-list li + li {
+            margin-top: 0.75rem;
+        }
+
+        .course-list strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        @media (max-width: 900px) {
+            .nav-links {
+                gap: 1.25rem;
+                margin-right: 1.25rem;
+            }
+        }
+
         @media (max-width: 768px) {
+            .logo {
+                font-size: 1.15rem;
+            }
+
+            .nav-actions {
+                order: 0;
+            }
+
+            .nav-links {
+                margin: 0;
+            }
+
+            .edu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline {
+                padding-left: 1.5rem;
+            }
+
+            .timeline-item::before {
+                left: calc(-1.5rem - 8px);
+            }
+
             nav {
                 flex-wrap: wrap;
             }
@@ -479,65 +749,61 @@
 <body>
     <header>
         <nav class="container">
-            <div class="logo">Matias Nahuel Araujo</div>
-            <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
-                <i class="fas fa-bars" aria-hidden="true"></i>
-            </button>
+            <a href="#top" class="logo">Matias Nahuel Araujo</a>
+            <div class="nav-actions">
+                <button class="lang-toggle" type="button" aria-label="Cambiar a español">ES</button>
+                <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
             <ul class="nav-links" id="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+                <li><a href="#education" data-i18n="nav.education">Education</a></li>
+                <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="top">
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1>Hi, I'm Matias Nahuel Araujo</h1>
-                    <p class="subtitle">Innovation & R&D Specialist | Master in Business & Technology</p>
-                    <p class="description">
-                        Solutions Architect specializing in cutting-edge R&D and disruptive innovation. 
-                        Master in Business & Technology (MBT) from Universidad de San Andrés. 
-                        Expert in exploring emerging technologies like Blockchain, AI, Computer Vision, and NLP 
-                        to create breakthrough business solutions and next-generation digital products.
-                    </p>
+                    <h1 data-i18n="hero.title">Hi, I'm Matias Nahuel Araujo</h1>
+                    <p class="subtitle" data-i18n="hero.subtitle">Innovation R&amp;D | Electronics Engineer | Master in Business &amp; Technology</p>
+                    <p class="description" data-i18n="hero.description">I explore emerging technologies such as AI, Blockchain, Computer Vision and NLP, and turn them into proofs of concept and new business opportunities. Electronics Engineer (UTN) with a Master in Business &amp; Technology from Universidad de San Andrés.</p>
                     <div class="cta-buttons">
                         <a href="#contact" class="btn btn-primary">
-                            <i class="fas fa-envelope"></i>
-                            Get In Touch
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <span data-i18n="hero.cta">Get In Touch</span>
                         </a>
                         <a href="https://www.linkedin.com/in/matias-nahuel-araujo/" class="btn btn-secondary" target="_blank" rel="noopener">
-                            <i class="fab fa-linkedin"></i>
-                            LinkedIn Profile
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            <span data-i18n="hero.linkedin">LinkedIn Profile</span>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
+        <section class="quote-band" aria-label="Motto">
+            <div class="container">
+                <blockquote lang="en">
+                    <i class="fas fa-quote-left" aria-hidden="true"></i>
+                    <p>The world that we live in is what we make it.</p>
+                </blockquote>
+            </div>
+        </section>
+
         <section id="about" class="section about">
             <div class="container">
-                <h2 class="section-title">About Me</h2>
+                <h2 class="section-title" data-i18n="about.title">About Me</h2>
                 <div class="about-content">
                     <div class="about-text">
-                        <p>
-                            Innovation & R&D Analyst at Flock IT with over 8 years of experience exploring cutting-edge technologies 
-                            to drive business transformation. I hold a Master in Business & Technology (MBT) from 
-                            Universidad de San Andrés, combining technical expertise with strategic business vision.
-                        </p>
-                        <p>
-                            Specialized in identifying and implementing disruptive technologies including Blockchain, AI/ML, 
-                            Computer Vision, NLP, and emerging fintech solutions. My research focuses on bridging the gap 
-                            between experimental technology and practical business applications, with published work on 
-                            brain-computer interfaces and evoked potentials.
-                        </p>
-                        <p>
-                            Passionate about incremental and disruptive innovation, leading proof-of-concept development 
-                            and sharing insights through Design Thinking methodologies. Always seeking collaborative 
-                            opportunities in R&D environments to push the boundaries of what's possible.
-                        </p>
+                        <p data-i18n="about.p1">I grew up taking things apart, figuring out how they worked, and putting them back together (big air quotes on that last part). That curiosity never left, it just scaled: from watches to systems, from circuits to AI.</p>
+                        <p data-i18n="about.p2">Today I work in innovation as an R&amp;D Specialist at Flock IT, but not the "let's implement this tech because it's trendy" kind. I'd rather ask "what do you need it for?" before building. I believe the best technology is the one that solves real problems, not the one that follows the hype.</p>
+                        <p data-i18n="about.p3">I enjoy fixing things (most recently, an electric car charger), learning from people from other cultures, and finding the "how does it work" in everything, from complex systems to financial markets. To me, "it can't be done" means "well, it couldn't be done before, now let's see how".</p>
                     </div>
                     <div class="about-image">
                         <img src="assets/images/profile-photo.jpg" alt="Matias Nahuel Araujo" class="profile-img" width="300" height="300" loading="lazy" decoding="async">
@@ -546,49 +812,161 @@
             </div>
         </section>
 
+        <section id="experience" class="section experience">
+            <div class="container">
+                <h2 class="section-title" data-i18n="exp.title">Experience</h2>
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="timeline-head">
+                            <h3 data-i18n="exp.flock.role">R&amp;D Specialist</h3>
+                            <span class="timeline-date" data-i18n="exp.flock.date">Nov 2022 – Present</span>
+                        </div>
+                        <p class="timeline-company">Flock IT</p>
+                        <ul>
+                            <li data-i18n="exp.flock.b1">Exploring new technologies that can open up new lines of business.</li>
+                            <li data-i18n="exp.flock.b2">Analyzing solutions built on AI, robotics, Blockchain and computer vision.</li>
+                            <li data-i18n="exp.flock.b3">Building conversational chatbots with NLP and GenAI.</li>
+                            <li data-i18n="exp.flock.b4">Sharing the outcomes of Design Thinking processes with the rest of the team.</li>
+                        </ul>
+                    </article>
+                    <article class="timeline-item">
+                        <div class="timeline-head">
+                            <h3 data-i18n="exp.link.role">Innovation &amp; New Technologies Analyst</h3>
+                            <span class="timeline-date" data-i18n="exp.link.date">Jun 2017 – Nov 2022</span>
+                        </div>
+                        <p class="timeline-company">Red Link S.A.</p>
+                        <ul>
+                            <li data-i18n="exp.link.b1">Researching new technologies that could be applied to the business or open new verticals.</li>
+                            <li data-i18n="exp.link.b2">Developing PoCs and demos with AI, ML, Blockchain, NFC and biometrics.</li>
+                            <li data-i18n="exp.link.b3">Solidity development and blockchain interfaces.</li>
+                            <li data-i18n="exp.link.b4">Incremental and disruptive innovation, adding new features to the channels and sharing the knowledge gained across the company.</li>
+                        </ul>
+                    </article>
+                    <article class="timeline-item">
+                        <div class="timeline-head">
+                            <h3 data-i18n="exp.pds.role">Software Developer</h3>
+                            <span class="timeline-date" data-i18n="exp.pds.date">Mar 2017 – May 2017</span>
+                        </div>
+                        <p class="timeline-company">PDS - Proyectos Del Sur</p>
+                        <ul>
+                            <li data-i18n="exp.pds.b1">Software for POS terminals, mobile payments and contactless smartcards, on both the hardware and software side.</li>
+                        </ul>
+                    </article>
+                    <article class="timeline-item">
+                        <div class="timeline-head">
+                            <h3 data-i18n="exp.dynamo.role">Technical Consultant, SIM Card Solutions</h3>
+                            <span class="timeline-date" data-i18n="exp.dynamo.date">Sep 2015 – Mar 2017</span>
+                        </div>
+                        <p class="timeline-company">Dynamo Mobile</p>
+                        <ul>
+                            <li data-i18n="exp.dynamo.b1">Development of applets and SIM card solutions: software, validations and VAS.</li>
+                            <li data-i18n="exp.dynamo.b2">Proofs of concept and technical liaison with partners, clients and other companies.</li>
+                        </ul>
+                    </article>
+                    <article class="timeline-item">
+                        <div class="timeline-head">
+                            <h3 data-i18n="exp.gemalto.role">Card Software Trainee</h3>
+                            <span class="timeline-date" data-i18n="exp.gemalto.date">Mar 2014 – Aug 2015</span>
+                        </div>
+                        <p class="timeline-company">Gemalto</p>
+                        <ul>
+                            <li data-i18n="exp.gemalto.b1">Validation, maintenance and development of SIM card applets (GSM/UMTS, S@T services).</li>
+                            <li data-i18n="exp.gemalto.b2">Card validations for Advanced-OTA (LTE) platforms and Android proofs of concept using the OpenMobile API.</li>
+                        </ul>
+                    </article>
+                    <article class="timeline-item">
+                        <div class="timeline-head">
+                            <h3 data-i18n="exp.early.role">Earlier roles</h3>
+                            <span class="timeline-date">2009 – 2011</span>
+                        </div>
+                        <ul>
+                            <li data-i18n="exp.early.b1"><strong>Tesis OyS</strong> · Drupal developer and server administration (Dec 2010 – Jul 2011).</li>
+                            <li data-i18n="exp.early.b2"><strong>Mitrol</strong> · Intern: telephony hardware repair and transcriptions for speech recognition systems (Jun – Dec 2009).</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section education">
+            <div class="container">
+                <h2 class="section-title" data-i18n="edu.title">Education</h2>
+                <div class="edu-grid">
+                    <article class="edu-card edu-featured">
+                        <div class="edu-head">
+                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                            <div>
+                                <h3>Master in Business &amp; Technology (MBT)</h3>
+                                <p class="edu-school" data-i18n="edu.mbt.school">Universidad de San Andrés, School of Business · 2024 – 2026</p>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <p class="project-label" data-i18n="edu.mbt.label">Final project</p>
+                            <h4><a href="https://mingo.ar" target="_blank" rel="noopener">Mingo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></h4>
+                            <p data-i18n="edu.mbt.desc">An agricultural crowdfunding platform designed to make investing in agro easy, accessible and safe: investors fund verified production projects such as regenerative livestock, extensive farming and pecan nuts, while producers gain a new source of financing. We took it as far as the business model and landing page; it did not reach launch.</p>
+                        </div>
+                    </article>
+                    <article class="edu-card">
+                        <div class="edu-head">
+                            <i class="fas fa-microchip" aria-hidden="true"></i>
+                            <div>
+                                <h3 data-i18n="edu.utn.title">Electronics Engineering</h3>
+                                <p class="edu-school">Universidad Tecnológica Nacional · 2010 – 2017</p>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <p class="project-label" data-i18n="edu.utn.label">Publication</p>
+                            <p lang="es"><em>Evaluación y detección de potenciales evocados en una interfaz cerebro computadora</em></p>
+                        </div>
+                    </article>
+                    <article class="edu-card">
+                        <div class="edu-head">
+                            <i class="fas fa-certificate" aria-hidden="true"></i>
+                            <div>
+                                <h3 data-i18n="edu.courses.title">Courses</h3>
+                            </div>
+                        </div>
+                        <ul class="course-list">
+                            <li><strong>UX Designer</strong> · Digital House · 2022</li>
+                            <li><strong data-i18n="edu.courses.defy">Crypto &amp; DeFi Ecosystem 101</strong> · Defy Education · 2022</li>
+                            <li><strong>Fintech &amp; Digital Banking</strong> · Pontificia Universidad Católica Argentina · 2021</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <section id="skills" class="section skills">
             <div class="container">
-                <h2 class="section-title">Skills & Expertise</h2>
+                <h2 class="section-title" data-i18n="skills.title">Skills &amp; Expertise</h2>
                 <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-cubes" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="skill-title">Blockchain & DeFi</h3>
-                        <p class="skill-description">
-                            Developing smart contracts with Solidity, DeFi solutions, and blockchain integrations. 
-                            Specialized in cryptocurrency ecosystems and tokenization strategies.
-                        </p>
-                    </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <i class="fas fa-brain" aria-hidden="true"></i>
                         </div>
-                        <h3 class="skill-title">AI & Computer Vision</h3>
-                        <p class="skill-description">
-                            Implementing machine learning models, NLP conversational chatbots, and computer vision solutions 
-                            for next-generation business applications.
-                        </p>
+                        <h3 class="skill-title" data-i18n="skills.ai.title">AI &amp; Computer Vision</h3>
+                        <p class="skill-description" data-i18n="skills.ai.desc">Machine learning models, conversational chatbots with NLP and GenAI, and computer vision solutions applied to real business problems.</p>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <i class="fas fa-lightbulb" aria-hidden="true"></i>
                         </div>
-                        <h3 class="skill-title">Innovation Research</h3>
-                        <p class="skill-description">
-                            Technology scouting, proof-of-concept development, Design Thinking facilitation, 
-                            and strategic analysis of emerging technologies for business transformation.
-                        </p>
+                        <h3 class="skill-title" data-i18n="skills.inn.title">Innovation Research</h3>
+                        <p class="skill-description" data-i18n="skills.inn.desc">Technology scouting, proof-of-concept development, Design Thinking facilitation and analysis of emerging technologies for new business.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-cubes" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="skill-title">Blockchain &amp; DeFi</h3>
+                        <p class="skill-description" data-i18n="skills.bc.desc">Smart contracts with Solidity, DeFi solutions and blockchain integrations, with a focus on crypto ecosystems and tokenization.</p>
                     </div>
                     <div class="skill-card">
                         <div class="skill-icon">
                             <i class="fas fa-credit-card" aria-hidden="true"></i>
                         </div>
-                        <h3 class="skill-title">Fintech & IoT</h3>
-                        <p class="skill-description">
-                            Payment systems, contactless technology, biometric solutions, SIM card applets, 
-                            and hardware-software integration for financial services.
-                        </p>
+                        <h3 class="skill-title" data-i18n="skills.fin.title">Fintech &amp; Payments</h3>
+                        <p class="skill-description" data-i18n="skills.fin.desc">Payment systems, contactless and NFC technology, biometrics, SIM card applets and hardware-software integration for financial services.</p>
                     </div>
                 </div>
             </div>
@@ -596,21 +974,18 @@
 
         <section id="contact" class="section contact">
             <div class="container">
-                <h2 class="section-title">Let's Connect</h2>
+                <h2 class="section-title" data-i18n="contact.title">Let's Connect</h2>
                 <div class="contact-content">
-                    <p class="contact-description">
-                        Open to innovative R&D collaborations and cutting-edge technology projects. 
-                        Let's connect to explore breakthrough solutions and transform ideas into reality!
-                    </p>
+                    <p class="contact-description" data-i18n="contact.desc">If any of this resonated with you, let's talk!</p>
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/matias-nahuel-araujo/" class="social-link" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
                         </a>
                         <a href="https://github.com/nahuelmatias" class="social-link" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
+                            <i class="fab fa-github" aria-hidden="true"></i>
                         </a>
                         <a href="mailto:matias.araujo@outlook.com" class="social-link" title="Email" aria-label="Email">
-                            <i class="fas fa-envelope"></i>
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
@@ -620,11 +995,100 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Matias Nahuel Araujo. All rights reserved.</p>
+            <p>&copy; 2026 Matias Nahuel Araujo. <span data-i18n="footer.rights">All rights reserved.</span></p>
         </div>
     </footer>
 
     <script>
+        // Language switch (English markup is the default; Spanish strings live here)
+        const translations = {
+            es: {
+                "nav.about": "Sobre mí",
+                "nav.experience": "Experiencia",
+                "nav.education": "Educación",
+                "nav.skills": "Skills",
+                "nav.contact": "Contacto",
+                "hero.title": "Hola, soy Matias Nahuel Araujo",
+                "hero.subtitle": "Innovación I+D | Ingeniero Electrónico | Master in Business &amp; Technology",
+                "hero.description": "Exploro tecnologías emergentes como IA, Blockchain, Computer Vision y NLP, y las convierto en pruebas de concepto y nuevas oportunidades de negocio. Ingeniero Electrónico (UTN) y Master in Business &amp; Technology por la Universidad de San Andrés.",
+                "hero.cta": "Hablemos",
+                "hero.linkedin": "Perfil de LinkedIn",
+                "about.title": "Sobre mí",
+                "about.p1": "Crecí desarmando cosas, entendiendo cómo funcionaban, y volviéndolas a armar (grandes comillas en esto último). Esa curiosidad nunca se fue, solo escaló: de relojes a sistemas, de circuitos hasta IA.",
+                "about.p2": "Hoy trabajo en innovación como Especialista en I+D en Flock IT, pero no del tipo \"implementemos tal tech porque está de moda\". Soy más de preguntar \"¿para qué lo necesitás?\" antes de construir. Creo que la mejor tecnología es la que resuelve problemas reales, no la que sigue el hype.",
+                "about.p3": "Me divierte reparar cosas (hace poco, un cargador de auto eléctrico), aprender de gente de otras culturas, y encontrar el \"cómo funciona\" en todo, desde sistemas complejos hasta el mercado financiero. Un \"no se puede\" es para mí un \"bueno, antes no se podía, ahora veamos el cómo\".",
+                "exp.title": "Experiencia",
+                "exp.flock.role": "Especialista en Investigación y Desarrollo",
+                "exp.flock.date": "nov. 2022 – Actualidad",
+                "exp.flock.b1": "Exploración de nuevas tecnologías que se puedan usar para hacer nuevos negocios.",
+                "exp.flock.b2": "Análisis de soluciones utilizando IA, robótica, Blockchain y computer vision.",
+                "exp.flock.b3": "Chatbots conversacionales utilizando NLP y GenAI.",
+                "exp.flock.b4": "Compartir con el resto del equipo los resultados de los procesos de Design Thinking.",
+                "exp.link.role": "Analista de Innovación y Nuevas Tecnologías",
+                "exp.link.date": "jun. 2017 – nov. 2022",
+                "exp.link.b1": "Búsqueda e investigación de nuevas tecnologías que puedan aplicar al negocio o abrir nuevos verticales.",
+                "exp.link.b2": "Desarrollo de POCs y demos con IA, ML, Blockchain, NFC y biometría.",
+                "exp.link.b3": "Desarrollo en Solidity e interfaces con Blockchains.",
+                "exp.link.b4": "Innovación incremental y disruptiva, agregando nuevas funcionalidades a los canales y compartiendo con la empresa los conocimientos adquiridos.",
+                "exp.pds.role": "Desarrollador de Software",
+                "exp.pds.date": "mar. 2017 – may. 2017",
+                "exp.pds.b1": "Software para POS, pagos móviles y smartcards contactless, tanto en su hardware como en su software.",
+                "exp.dynamo.role": "Technical Consultant, SIM Card Solutions",
+                "exp.dynamo.date": "sep. 2015 – mar. 2017",
+                "exp.dynamo.b1": "Desarrollo de applets y soluciones vinculadas a SIM cards: software, validaciones y VAS.",
+                "exp.dynamo.b2": "Pruebas de concepto y vinculación con partners, clientes y área técnica de otras empresas.",
+                "exp.gemalto.role": "Card Software Trainee",
+                "exp.gemalto.date": "mar. 2014 – ago. 2015",
+                "exp.gemalto.b1": "Validación, mantenimiento y desarrollo de applets para SIM cards (GSM/UMTS, S@T services).",
+                "exp.gemalto.b2": "Validaciones de tarjetas para plataformas Advanced-OTA (LTE) y pruebas de concepto en Android con OpenMobile API.",
+                "exp.early.role": "Primeros pasos",
+                "exp.early.b1": "<strong>Tesis OyS</strong> · Programador en Drupal y administración de servidores (dic. 2010 – jul. 2011).",
+                "exp.early.b2": "<strong>Mitrol</strong> · Pasante: reparación de hardware de telefonía y transcripciones para sistemas de reconocimiento de voz (jun. – dic. 2009).",
+                "edu.title": "Educación",
+                "edu.mbt.school": "Escuela de Negocios, Universidad de San Andrés · 2024 – 2026",
+                "edu.mbt.label": "Trabajo final",
+                "edu.mbt.desc": "Una plataforma de crowdfunding agropecuario pensada para que invertir en agro sea fácil, accesible y seguro: los inversores financian proyectos productivos verificados, como ganadería regenerativa, agricultura extensiva y nuez pecán, y los productores acceden a una nueva fuente de financiamiento. Llegamos hasta el modelo de negocio y la landing; no llegó a lanzarse.",
+                "edu.utn.title": "Ingeniería Electrónica",
+                "edu.utn.label": "Publicación",
+                "edu.courses.title": "Cursos",
+                "edu.courses.defy": "Ecosistema Crypto &amp; DeFi 101",
+                "skills.title": "Skills y especialidades",
+                "skills.ai.title": "IA y Computer Vision",
+                "skills.ai.desc": "Modelos de machine learning, chatbots conversacionales con NLP y GenAI, y soluciones de computer vision aplicadas a problemas reales de negocio.",
+                "skills.inn.title": "Investigación e innovación",
+                "skills.inn.desc": "Scouting tecnológico, desarrollo de pruebas de concepto, facilitación de Design Thinking y análisis de tecnologías emergentes para nuevos negocios.",
+                "skills.bc.desc": "Smart contracts con Solidity, soluciones DeFi e integraciones con blockchains, con foco en ecosistemas crypto y tokenización.",
+                "skills.fin.title": "Fintech y pagos",
+                "skills.fin.desc": "Sistemas de pago, tecnología contactless y NFC, biometría, applets para SIM cards e integración hardware-software para servicios financieros.",
+                "contact.title": "Hablemos",
+                "contact.desc": "Si te sentiste identificado con algo de esto, ¡hablemos!",
+                "footer.rights": "Todos los derechos reservados.",
+                "title": "Matias Nahuel Araujo | Innovación e I+D"
+            }
+        };
+        const i18nNodes = document.querySelectorAll('[data-i18n]');
+        const english = { title: document.title };
+        i18nNodes.forEach(node => { english[node.dataset.i18n] = node.innerHTML; });
+        const langToggle = document.querySelector('.lang-toggle');
+        const setLanguage = (lang) => {
+            const dict = lang === 'es' ? translations.es : english;
+            i18nNodes.forEach(node => { node.innerHTML = dict[node.dataset.i18n] ?? english[node.dataset.i18n]; });
+            document.title = dict.title;
+            document.documentElement.lang = lang;
+            langToggle.textContent = lang === 'es' ? 'EN' : 'ES';
+            langToggle.setAttribute('aria-label', lang === 'es' ? 'Switch to English' : 'Cambiar a español');
+        };
+        let currentLang = 'en';
+        try {
+            currentLang = localStorage.getItem('lang') || ((navigator.language || '').toLowerCase().startsWith('es') ? 'es' : 'en');
+        } catch (e) {}
+        if (currentLang === 'es') setLanguage('es');
+        langToggle.addEventListener('click', () => {
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+            setLanguage(currentLang);
+            try { localStorage.setItem('lang', currentLang); } catch (e) {}
+        });
+
         // Mobile navigation menu
         const navToggle = document.querySelector('.nav-toggle');
         const navLinks = document.getElementById('nav-links');

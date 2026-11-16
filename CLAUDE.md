@@ -39,7 +39,8 @@ This is a static site deployed via GitHub Pages with no build process required.
 - Social media links (LinkedIn, GitHub, Email)
 - Mobile hamburger navigation menu
 - Open Graph / Twitter Card meta tags for link previews
-- Skills showcase section
+- Motto quote band, Experience timeline, Education section (MBT + Mingo final project), Skills showcase
+- English/Spanish language switch
 - Contact section with social links
 
 ### Customization Areas
@@ -54,11 +55,20 @@ This is a static site deployed via GitHub Pages with no build process required.
 - Custom domain configured via CNAME file pointing to `matiasaraujo.ar`
 - No manual deployment steps required
 
+## Internationalization
+
+- English text lives in the HTML markup (default, used by search engines)
+- Spanish strings live in the `translations.es` object in the `<script>` tag, keyed by each element's `data-i18n` attribute
+- When adding or editing visible text, add a `data-i18n` key and update both the markup and `translations.es`
+- Language defaults to the browser language (Spanish if it starts with `es`) and the choice is stored in `localStorage`
+
 ## Content Management
 
 When updating personal information:
 - Hero section: Name, title, and description
 - About section: Personal bio and achievements
+- Experience section: Roles, dates and highlights (source: LinkedIn profile)
+- Education section: Degrees, final project and courses
 - Skills section: Technical expertise and descriptions
 - Contact section: Social media links and contact methods
 - Update LinkedIn URL to match actual profile
