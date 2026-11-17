@@ -1,0 +1,33 @@
+# Jekyll config. GitHub Pages builds the site with Jekyll automatically.
+title: Matias Nahuel Araujo
+description: Notes on technology, innovation and business.
+url: https://matiasaraujo.ar
+lang: es
+
+# Notes live in _posts/ as Markdown files named YYYY-MM-DD-title.md
+permalink: /notes/:year/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: note
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+plugins:
+  - jekyll-feed
+
+feed:
+  path: feed.xml
+
+exclude:
+  - CLAUDE.md
+  - PRODUCT.md
+  - DESIGN.md
+  - NOTAS.md
+  - LICENSE
+  - README.md

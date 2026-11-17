@@ -1,0 +1,20 @@
+---
+layout: base
+---
+{% assign es = true %}{% if page.lang == 'en' %}{% assign es = false %}{% endif %}
+<article class="note">
+    <header class="note-head">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d/%m/%Y" }}</time>
+        <h1>{{ page.title }}</h1>
+        {% if page.description %}<p class="lede">{{ page.description }}</p>{% endif %}
+    </header>
+    <div class="prose">
+        {{ content }}
+    </div>
+    <aside class="note-cta">
+        {% if es %}¿Te quedó alguna idea o querés discutirla?{% else %}Got thoughts on this?{% endif %}
+        <a href="https://www.linkedin.com/in/matias-nahuel-araujo/" target="_blank" rel="noopener">LinkedIn</a>
+        ·
+        <a href="mailto:matias.araujo@outlook.com">Email</a>
+    </aside>
+</article>
