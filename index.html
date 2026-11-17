@@ -1,46 +1,48 @@
+---
+# Jekyll front matter: lets this page list the latest Notes. Keep it, even empty.
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matias Nahuel Araujo | Innovation &amp; R&amp;D</title>
-    <meta name="description" content="Matias Nahuel Araujo: Innovation R&amp;D, Electronics Engineer and Master in Business &amp; Technology (Universidad de San Andrés). AI, Blockchain, Computer Vision and emerging technologies.">
+    <meta name="description" content="Matias Nahuel Araujo: Innovation R&amp;D, Electronics Engineer and Master in Business &amp; Technology (Universidad de San Andrés). AI, Blockchain, Computer Vision, strategy and finance.">
     <link rel="canonical" href="https://matiasaraujo.ar/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://matiasaraujo.ar/">
     <meta property="og:title" content="Matias Nahuel Araujo | Innovation &amp; R&amp;D">
-    <meta property="og:description" content="Innovation R&amp;D, Electronics Engineer and Master in Business &amp; Technology (Universidad de San Andrés). AI, Blockchain, Computer Vision and emerging technologies.">
+    <meta property="og:description" content="Electronics Engineer and Master in Business &amp; Technology (Universidad de San Andrés). I build the proof of concept and make the business case for it.">
     <meta property="og:image" content="https://matiasaraujo.ar/assets/images/profile-photo.jpg">
     <meta property="og:image:width" content="600">
     <meta property="og:image:height" content="600">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Matias Nahuel Araujo | Innovation &amp; R&amp;D">
-    <meta name="twitter:description" content="Innovation R&amp;D, Electronics Engineer and Master in Business &amp; Technology (Universidad de San Andrés).">
+    <meta name="twitter:description" content="Electronics Engineer and Master in Business &amp; Technology (Universidad de San Andrés).">
     <meta name="twitter:image" content="https://matiasaraujo.ar/assets/images/profile-photo.jpg">
     <meta name="theme-color" content="#0A0E27">
+    <link rel="alternate" type="application/atom+xml" title="Notes · Matias Nahuel Araujo" href="/feed.xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary-cyan: #00D9FF;
-            --dark-cyan: #0099CC;
-            --light-cyan: #33E5FF;
-            --neon-purple: #8B5CF6;
-            --deep-purple: #6D28D9;
+            --cyan-dim: rgba(0, 217, 255, 0.35);
+            --cyan-line: rgba(0, 217, 255, 0.18);
             --electric-green: #00FF88;
-            --dark-green: #00CC6A;
+            --magenta: #D60F7A;
             --deep-space: #0A0E27;
             --dark-navy: #0F172A;
-            --space-gray: #1E293B;
-            --tech-gray: #475569;
-            --light-gray: #E2E8F0;
             --white: #FFFFFF;
             --text-primary: #FFFFFF;
-            --text-secondary: #94A3B8;
-            --text-dark: #0F172A;
+            --text-secondary: #A3B1C6;
+            --font-display: 'Oswald', 'Arial Narrow', sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+            --header-h: 72px;
         }
 
         * {
@@ -49,81 +51,27 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+            scrollbar-color: var(--cyan-dim) var(--deep-space);
+        }
+
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: var(--font-body);
             line-height: 1.6;
             color: var(--text-primary);
-            background: linear-gradient(135deg, var(--deep-space) 0%, var(--dark-navy) 50%, var(--space-gray) 100%);
+            background: var(--deep-space);
+            caret-color: var(--primary-cyan);
             min-height: 100vh;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+        ::selection {
+            background: var(--primary-cyan);
+            color: var(--deep-space);
         }
 
-        header {
-            background: rgba(10, 14, 39, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0, 217, 255, 0.2);
-            box-shadow: 0 4px 30px rgba(0, 217, 255, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-cyan);
-            text-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-secondary);
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-cyan);
-            text-shadow: 0 0 8px rgba(0, 217, 255, 0.6);
-        }
-
-        .nav-toggle {
-            display: none;
-            background: none;
-            border: 1px solid rgba(0, 217, 255, 0.4);
-            border-radius: 0.5rem;
-            color: var(--primary-cyan);
-            font-size: 1.25rem;
-            width: 44px;
-            height: 44px;
-            cursor: pointer;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .section {
-            scroll-margin-top: 80px;
+        a {
+            text-underline-offset: 0.2em;
         }
 
         a:focus-visible,
@@ -132,140 +80,293 @@
             outline-offset: 3px;
         }
 
-        @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
-            }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
 
-            * {
-                transition: none !important;
-            }
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            white-space: nowrap;
+        }
+
+        /* ---------- Header ---------- */
+
+        header {
+            position: fixed;
+            inset: 0 0 auto 0;
+            z-index: 1000;
+            background: rgba(10, 14, 39, 0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--cyan-line);
+            transition: background 0.3s ease;
+        }
+
+        header.scrolled {
+            background: rgba(10, 14, 39, 0.98);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: var(--header-h);
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            color: var(--primary-cyan);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.75rem;
+            margin-left: auto;
+            margin-right: 1.75rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-cyan);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            order: 3;
+        }
+
+        .lang-toggle,
+        .nav-toggle {
+            background: none;
+            border: 1px solid var(--cyan-dim);
+            border-radius: 0.5rem;
+            color: var(--primary-cyan);
+            cursor: pointer;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .lang-toggle {
+            font: 600 0.85rem/1 var(--font-body);
+            letter-spacing: 0.05em;
+            min-width: 44px;
+            height: 36px;
+            padding: 0 0.6rem;
+        }
+
+        .lang-toggle:hover {
+            background: var(--primary-cyan);
+            color: var(--deep-space);
+        }
+
+        .nav-toggle {
+            display: none;
+            font-size: 1.25rem;
+            width: 44px;
+            height: 44px;
         }
 
         main {
-            margin-top: 80px;
+            margin-top: var(--header-h);
         }
+
+        /* ---------- Hero: the board ---------- */
 
         .hero {
-            padding: 4rem 0;
-            text-align: center;
-            background: linear-gradient(135deg, var(--deep-space) 0%, var(--dark-navy) 50%, var(--space-gray) 100%);
             position: relative;
+            min-height: min(88vh, 820px);
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: var(--deep-space);
+            border-bottom: 1px solid var(--cyan-line);
         }
 
-        .hero::before {
-            content: '';
+        #pcb {
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 50% 50%, rgba(0, 217, 255, 0.1) 0%, transparent 50%);
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .hero .container {
+            position: relative;
+            width: 100%;
             pointer-events: none;
         }
 
         .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 640px;
+            padding: 4rem 0;
+            pointer-events: auto;
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 8vw, 6rem);
             font-weight: 700;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--primary-cyan), var(--neon-purple), var(--electric-green));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            filter: drop-shadow(0 0 20px rgba(0, 217, 255, 0.3));
+            line-height: 0.95;
+            text-transform: uppercase;
+            letter-spacing: -0.01em;
+            color: var(--white);
+            text-wrap: balance;
         }
 
-        .hero .subtitle {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
+        .role-line {
+            margin-top: 1.25rem;
+            min-height: 2.2em;
+            font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+            font-weight: 600;
+            color: var(--primary-cyan);
+        }
+
+        .typed::after {
+            content: '';
+            display: inline-block;
+            width: 0.08em;
+            height: 1.05em;
+            margin-left: 0.12em;
+            vertical-align: -0.15em;
+            background: currentColor;
+            animation: caret 1s steps(1) infinite;
+        }
+
+        @keyframes caret {
+            50% { opacity: 0; }
         }
 
         .hero .description {
+            margin-top: 1.5rem;
+            max-width: 34rem;
             font-size: 1.1rem;
             color: var(--text-secondary);
-            margin-bottom: 3rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .cta-buttons {
             display: flex;
             gap: 1rem;
-            justify-content: center;
             flex-wrap: wrap;
+            margin-top: 2.25rem;
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 2rem;
+            gap: 0.6rem;
+            padding: 0.8rem 1.6rem;
             border-radius: 0.5rem;
-            text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+            text-decoration: none;
+            border: 1px solid var(--primary-cyan);
+            transition: transform 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out), background 0.2s ease, color 0.2s ease;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary-cyan), var(--neon-purple));
-            color: var(--white);
-            border: 1px solid var(--primary-cyan);
-        }
-
-        .btn-primary:hover {
-            background: linear-gradient(135deg, var(--light-cyan), var(--primary-cyan));
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 217, 255, 0.4), 0 0 20px rgba(0, 217, 255, 0.3);
+            background: var(--primary-cyan);
+            color: var(--deep-space);
         }
 
         .btn-secondary {
-            background: transparent;
+            background: rgba(10, 14, 39, 0.75);
             color: var(--primary-cyan);
-            border-color: var(--primary-cyan);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
         }
 
         .btn-secondary:hover {
             background: var(--primary-cyan);
             color: var(--deep-space);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 217, 255, 0.3), 0 0 15px rgba(0, 217, 255, 0.2);
         }
 
+        /* ---------- Motto ---------- */
+
+        .motto {
+            background: var(--magenta);
+            padding: clamp(3rem, 8vw, 5.5rem) 0;
+            text-align: center;
+        }
+
+        .motto blockquote {
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            color: var(--white);
+            line-height: 1;
+        }
+
+        .motto .motto-lead {
+            display: block;
+            font-size: clamp(1.4rem, 3.6vw, 2.6rem);
+            font-weight: 400;
+            letter-spacing: 0.02em;
+        }
+
+        .motto .motto-punch {
+            display: block;
+            margin-top: 0.4rem;
+            font-size: clamp(2.8rem, 9vw, 6rem);
+            font-weight: 700;
+            letter-spacing: -0.005em;
+        }
+
+        /* ---------- Sections ---------- */
+
         .section {
-            padding: 4rem 0;
+            padding: clamp(4rem, 9vw, 6.5rem) 0;
+            scroll-margin-top: var(--header-h);
         }
 
         .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.2rem, 5vw, 3.25rem);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.01em;
+            line-height: 1.05;
             text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 3rem;
-            color: var(--text-primary);
-            text-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
+            margin-bottom: 1rem;
         }
+
+        .section-intro {
+            max-width: 40rem;
+            margin: 0 auto 3rem;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .section-title + .about-content,
+        .section-title + .timeline,
+        .section-title + .edu-grid {
+            margin-top: 3rem;
+        }
+
+        /* About */
 
         .about {
-            background: linear-gradient(135deg, var(--dark-navy) 0%, var(--deep-space) 100%);
-            position: relative;
-        }
-
-        .about::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
-            pointer-events: none;
+            background: var(--dark-navy);
         }
 
         .about-content {
@@ -279,6 +380,7 @@
             font-size: 1.1rem;
             line-height: 1.8;
             color: var(--text-secondary);
+            max-width: 68ch;
         }
 
         .about-text p + p {
@@ -296,213 +398,48 @@
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid var(--primary-cyan);
-            box-shadow: 0 20px 40px rgba(0, 217, 255, 0.3), 0 0 30px rgba(0, 217, 255, 0.2);
-        }
-
-        .skills {
-            background: linear-gradient(135deg, var(--space-gray) 0%, var(--dark-navy) 100%);
-            position: relative;
-        }
-
-        .skills::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 80% 20%, rgba(0, 255, 136, 0.1) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-card {
-            background: rgba(10, 14, 39, 0.8);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 217, 255, 0.2);
-            padding: 2rem;
-            border-radius: 1rem;
-            text-align: center;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 217, 255, 0.2), 0 0 30px rgba(0, 217, 255, 0.1);
-            border-color: var(--primary-cyan);
-        }
-
-        .skill-icon {
-            font-size: 3rem;
-            color: var(--primary-cyan);
-            margin-bottom: 1rem;
-            filter: drop-shadow(0 0 10px rgba(0, 217, 255, 0.5));
-        }
-
-        .skill-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
-
-        .skill-description {
-            color: var(--text-secondary);
-        }
-
-        .contact {
-            background: linear-gradient(135deg, var(--deep-space) 0%, var(--dark-navy) 100%);
-            color: var(--white);
-            position: relative;
-        }
-
-        .contact::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .contact .section-title {
-            color: var(--white);
-        }
-
-        .contact-content {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .contact-description {
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-            color: #94a3b8;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .social-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary-cyan), var(--neon-purple));
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 50%;
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-            border: 1px solid var(--primary-cyan);
-        }
-
-        .social-link:hover {
-            background: linear-gradient(135deg, var(--light-cyan), var(--electric-green));
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 217, 255, 0.4), 0 0 20px rgba(0, 217, 255, 0.3);
-        }
-
-        footer {
-            background: var(--deep-space);
-            color: var(--text-secondary);
-            text-align: center;
-            padding: 2rem 0;
-            border-top: 1px solid rgba(0, 217, 255, 0.2);
-        }
-
-        .logo {
-            text-decoration: none;
-        }
-
-        .nav-actions {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            order: 3;
-        }
-
-        .lang-toggle {
-            background: none;
-            border: 1px solid rgba(0, 217, 255, 0.4);
-            border-radius: 0.5rem;
-            color: var(--primary-cyan);
-            font: inherit;
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            min-width: 44px;
-            height: 36px;
-            padding: 0 0.6rem;
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
             cursor: pointer;
-            transition: background 0.3s ease, color 0.3s ease;
         }
 
-        .lang-toggle:hover {
-            background: var(--primary-cyan);
-            color: var(--deep-space);
-        }
-
-        .nav-links {
-            margin-left: auto;
-            margin-right: 2rem;
-        }
-
-        .quote-band {
-            padding: 3rem 0;
-            background: var(--deep-space);
-            border-top: 1px solid rgba(0, 217, 255, 0.15);
-            border-bottom: 1px solid rgba(0, 217, 255, 0.15);
-            text-align: center;
-        }
-
-        .quote-band blockquote {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .quote-band i {
-            color: var(--neon-purple);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .quote-band p {
-            font-size: clamp(1.4rem, 3.5vw, 2.1rem);
-            font-weight: 300;
-            font-style: italic;
-            line-height: 1.4;
-            color: var(--text-primary);
-        }
+        /* Experience: the timeline is a trace that routes as you scroll */
 
         .experience {
-            background: linear-gradient(135deg, var(--space-gray) 0%, var(--dark-navy) 100%);
+            background: var(--deep-space);
         }
 
         .timeline {
+            --progress: 100%;
+            position: relative;
             max-width: 850px;
             margin: 0 auto;
-            border-left: 2px solid rgba(0, 217, 255, 0.3);
-            padding-left: 2rem;
+            padding-left: 2.25rem;
+        }
+
+        .timeline::before,
+        .timeline-trace {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.55rem;
+            width: 2px;
+            border-radius: 1px;
+        }
+
+        .timeline::before {
+            bottom: 0;
+            background: var(--cyan-line);
+        }
+
+        .timeline-trace {
+            height: var(--progress);
+            max-height: calc(100% - 0.55rem);
+            background: var(--primary-cyan);
         }
 
         .timeline-item {
             position: relative;
-            padding-bottom: 2.5rem;
+            padding-bottom: 2.75rem;
         }
 
         .timeline-item:last-child {
@@ -512,13 +449,20 @@
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: calc(-2rem - 8px);
+            left: calc(-2.25rem - 6px);
             top: 0.45rem;
             width: 14px;
             height: 14px;
             border-radius: 50%;
+            background: var(--deep-space);
+            border: 2px solid var(--cyan-dim);
+            transition: background 0.4s var(--ease-out), border-color 0.4s var(--ease-out), transform 0.4s var(--ease-out);
+        }
+
+        .timeline-item.lit::before {
             background: var(--primary-cyan);
-            box-shadow: 0 0 12px rgba(0, 217, 255, 0.7);
+            border-color: var(--primary-cyan);
+            transform: scale(1.15);
         }
 
         .timeline-head {
@@ -530,7 +474,8 @@
         }
 
         .timeline-head h3 {
-            font-size: 1.2rem;
+            font-size: 1.45rem;
+            line-height: 1.3;
             font-weight: 600;
         }
 
@@ -538,6 +483,7 @@
             color: var(--primary-cyan);
             font-size: 0.9rem;
             font-weight: 500;
+            font-variant-numeric: tabular-nums;
             white-space: nowrap;
         }
 
@@ -558,13 +504,85 @@
             margin-bottom: 0.35rem;
         }
 
+        .timeline-item li::marker {
+            color: var(--primary-cyan);
+        }
+
         .timeline-item li strong {
             color: var(--text-primary);
             font-weight: 600;
         }
 
+        /* Builder + Business */
+
+        .capabilities {
+            background: var(--dark-navy);
+        }
+
+        .cap-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-top: 1px solid var(--cyan-line);
+        }
+
+        .cap-col {
+            padding: 2.5rem 3rem 0 0;
+        }
+
+        .cap-col + .cap-col {
+            padding: 2.5rem 0 0 3rem;
+            border-left: 1px solid var(--cyan-line);
+        }
+
+        .cap-col h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: var(--font-display);
+            font-size: 1.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.01em;
+        }
+
+        .cap-col h3 i {
+            font-size: 1.3rem;
+            color: var(--primary-cyan);
+        }
+
+        .cap-col.business h3 i {
+            color: var(--magenta);
+        }
+
+        .cap-sub {
+            margin-top: 0.35rem;
+            color: var(--text-secondary);
+        }
+
+        .cap-list {
+            list-style: none;
+            margin-top: 1.75rem;
+        }
+
+        .cap-list li {
+            padding: 1.1rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .cap-list h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .cap-list p {
+            margin-top: 0.3rem;
+            color: var(--text-secondary);
+        }
+
+        /* Education */
+
         .education {
-            background: linear-gradient(135deg, var(--dark-navy) 0%, var(--deep-space) 100%);
+            background: var(--deep-space);
         }
 
         .edu-grid {
@@ -574,16 +592,15 @@
         }
 
         .edu-card {
-            background: rgba(10, 14, 39, 0.8);
-            border: 1px solid rgba(0, 217, 255, 0.2);
+            background: var(--dark-navy);
+            border: 1px solid var(--cyan-line);
             border-radius: 1rem;
             padding: 2rem;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
 
         .edu-featured {
             grid-column: 1 / -1;
-            border-color: rgba(0, 217, 255, 0.5);
+            border-color: var(--cyan-dim);
         }
 
         .edu-head {
@@ -593,16 +610,16 @@
         }
 
         .edu-head > i {
-            font-size: 2rem;
+            font-size: 1.75rem;
             color: var(--primary-cyan);
-            filter: drop-shadow(0 0 10px rgba(0, 217, 255, 0.5));
             width: 2.5rem;
             text-align: center;
             flex-shrink: 0;
         }
 
         .edu-head h3 {
-            font-size: 1.25rem;
+            font-size: 1.45rem;
+            line-height: 1.3;
             font-weight: 600;
         }
 
@@ -613,38 +630,40 @@
         .project {
             margin-top: 1.5rem;
             padding-top: 1.5rem;
-            border-top: 1px solid rgba(0, 217, 255, 0.15);
+            border-top: 1px solid var(--cyan-line);
             color: var(--text-secondary);
-        }
-
-        .project-label {
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--electric-green);
-            margin-bottom: 0.4rem;
+            max-width: 75ch;
         }
 
         .project h4 {
             font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
             margin-bottom: 0.5rem;
         }
 
         .project h4 a {
-            color: var(--text-primary);
-            text-decoration: none;
-            border-bottom: 1px solid var(--primary-cyan);
+            color: inherit;
+            text-decoration-color: var(--primary-cyan);
         }
 
         .project h4 a:hover {
             color: var(--primary-cyan);
         }
 
+        .project h4 .project-kind {
+            font-weight: 400;
+            color: var(--text-secondary);
+        }
+
         .project h4 i {
             font-size: 0.75em;
             margin-left: 0.3rem;
             color: var(--primary-cyan);
+        }
+
+        .paper-title {
+            color: var(--text-primary);
         }
 
         .paper-meta {
@@ -664,7 +683,7 @@
             font-weight: 600;
             font-size: 0.9rem;
             text-decoration: none;
-            transition: background 0.3s ease, color 0.3s ease;
+            transition: background 0.2s ease, color 0.2s ease;
         }
 
         .paper-link:hover {
@@ -676,13 +695,144 @@
             list-style: none;
             margin-top: 1.5rem;
             padding-top: 1.5rem;
-            border-top: 1px solid rgba(0, 217, 255, 0.15);
+            border-top: 1px solid var(--cyan-line);
             color: var(--text-secondary);
         }
 
         .course-list li + li {
             margin-top: 0.75rem;
         }
+
+        .course-list strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Notes */
+
+        .notes {
+            background: var(--dark-navy);
+        }
+
+        .notes-list {
+            list-style: none;
+            max-width: 760px;
+            margin: 0 auto;
+            border-top: 1px solid var(--cyan-line);
+        }
+
+        .notes-list a {
+            display: grid;
+            grid-template-columns: 7.5rem 1fr;
+            gap: 0.25rem 1.5rem;
+            padding: 1.25rem 0;
+            border-bottom: 1px solid var(--cyan-line);
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .notes-list a:hover .note-title {
+            color: var(--primary-cyan);
+        }
+
+        .notes-list time {
+            grid-row: span 2;
+            color: var(--primary-cyan);
+            font-size: 0.9rem;
+            font-variant-numeric: tabular-nums;
+            padding-top: 0.15rem;
+        }
+
+        .note-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .note-desc {
+            color: var(--text-secondary);
+        }
+
+        .notes-more {
+            display: block;
+            width: max-content;
+            margin: 2rem auto 0;
+            color: var(--primary-cyan);
+            font-weight: 600;
+        }
+
+        .notes-empty {
+            max-width: 32rem;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-secondary);
+            border: 1px dashed var(--cyan-dim);
+            border-radius: 1rem;
+        }
+
+        .notes-empty i {
+            display: block;
+            font-size: 1.75rem;
+            color: var(--primary-cyan);
+            margin-bottom: 0.75rem;
+        }
+
+        /* Contact */
+
+        .contact {
+            background: var(--deep-space);
+        }
+
+        .contact-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-description {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            color: var(--text-secondary);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 1px solid var(--primary-cyan);
+            color: var(--primary-cyan);
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: transform 0.2s var(--ease-out), background 0.2s ease, color 0.2s ease, box-shadow 0.2s var(--ease-out);
+        }
+
+        .social-link:hover {
+            background: var(--primary-cyan);
+            color: var(--deep-space);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+        }
+
+        footer {
+            background: var(--deep-space);
+            color: var(--text-secondary);
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid var(--cyan-line);
+            font-size: 0.9rem;
+        }
+
+        /* Easter egg toast */
 
         .egg-toast {
             position: fixed;
@@ -692,15 +842,15 @@
             width: max-content;
             max-width: min(calc(100% - 2rem), 480px);
             padding: 1rem 1.5rem;
-            background: rgba(10, 14, 39, 0.97);
+            background: var(--dark-navy);
             border: 1px solid var(--electric-green);
             border-radius: 0.75rem;
-            box-shadow: 0 0 25px rgba(0, 255, 136, 0.3);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
             color: var(--text-primary);
             text-align: center;
             opacity: 0;
             pointer-events: none;
-            transition: opacity 0.4s ease, transform 0.4s ease;
+            transition: opacity 0.4s var(--ease-out), transform 0.4s var(--ease-out);
             z-index: 2000;
         }
 
@@ -715,45 +865,30 @@
             margin-bottom: 0.25rem;
         }
 
-        .course-list strong {
-            color: var(--text-primary);
-            font-weight: 600;
+        .egg-toast strong i {
+            margin-right: 0.4rem;
         }
 
-        @media (max-width: 900px) {
+        /* ---------- Responsive ---------- */
+
+        @media (max-width: 1040px) {
             .nav-links {
-                gap: 1.25rem;
-                margin-right: 1.25rem;
+                gap: 1.1rem;
+                margin-right: 1.1rem;
+            }
+
+            .nav-links a {
+                font-size: 0.9rem;
             }
         }
 
-        @media (max-width: 768px) {
-            .logo {
-                font-size: 1.15rem;
+        @media (max-width: 900px) {
+            nav {
+                flex-wrap: wrap;
             }
 
             .nav-actions {
                 order: 0;
-            }
-
-            .nav-links {
-                margin: 0;
-            }
-
-            .edu-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .timeline {
-                padding-left: 1.5rem;
-            }
-
-            .timeline-item::before {
-                left: calc(-1.5rem - 8px);
-            }
-
-            nav {
-                flex-wrap: wrap;
             }
 
             .nav-toggle {
@@ -767,7 +902,8 @@
                 flex-direction: column;
                 gap: 0;
                 width: 100%;
-                padding-top: 0.5rem;
+                margin: 0;
+                padding: 0.5rem 0;
             }
 
             .nav-links.open {
@@ -777,7 +913,46 @@
             .nav-links a {
                 display: block;
                 padding: 0.75rem 0;
-                border-top: 1px solid rgba(0, 217, 255, 0.15);
+                border-top: 1px solid var(--cyan-line);
+                font-size: 1rem;
+            }
+
+            .cap-split {
+                grid-template-columns: 1fr;
+            }
+
+            .cap-col,
+            .cap-col + .cap-col {
+                padding: 2.5rem 0 0;
+                border-left: none;
+            }
+
+            .cap-col + .cap-col {
+                margin-top: 1rem;
+                border-top: 1px solid var(--cyan-line);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.25rem;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .hero {
+                min-height: auto;
+            }
+
+            .hero-content {
+                padding: 3.5rem 0 4rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
             }
 
             .profile-img {
@@ -785,19 +960,41 @@
                 height: 220px;
             }
 
-            .about-content {
+            .edu-grid {
                 grid-template-columns: 1fr;
-                text-align: center;
             }
 
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
+            .edu-card {
+                padding: 1.5rem;
             }
 
-            .social-links {
-                flex-wrap: wrap;
-                gap: 1rem;
+            .timeline {
+                padding-left: 1.75rem;
+            }
+
+            .timeline-item::before {
+                left: calc(-1.75rem - 6px);
+            }
+
+            .notes-list a {
+                grid-template-columns: 1fr;
+            }
+
+            .notes-list time {
+                grid-row: auto;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
+                animation: none !important;
             }
         }
     </style>
@@ -815,8 +1012,9 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="#about" data-i18n="nav.about">About</a></li>
                 <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+                <li><a href="#capabilities" data-i18n="nav.capabilities">What I do</a></li>
                 <li><a href="#education" data-i18n="nav.education">Education</a></li>
-                <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+                <li><a href="#notes" data-i18n="nav.notes">Notes</a></li>
                 <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
             </ul>
         </nav>
@@ -824,37 +1022,39 @@
 
     <main id="top">
         <section class="hero">
+            <canvas id="pcb" aria-hidden="true"></canvas>
             <div class="container">
                 <div class="hero-content">
-                    <h1 data-i18n="hero.title">Hi, I'm Matias Nahuel Araujo</h1>
-                    <p class="subtitle" data-i18n="hero.subtitle">Innovation R&amp;D | Electronics Engineer | Master in Business &amp; Technology</p>
-                    <p class="description" data-i18n="hero.description">I explore emerging technologies such as AI, Blockchain, Computer Vision and NLP, and turn them into proofs of concept and new business opportunities. Electronics Engineer (UTN) with a Master in Business &amp; Technology from Universidad de San Andrés.</p>
+                    <h1>Matias Nahuel Araujo</h1>
+                    <p class="role-line">
+                        <span class="visually-hidden" data-i18n="hero.roles">Innovation R&amp;D, Electronics Engineer, Master in Business &amp; Technology</span>
+                        <span class="typed" aria-hidden="true">Electronics Engineer</span>
+                    </p>
+                    <p class="description" data-i18n="hero.description">I explore emerging technologies such as AI, Blockchain and Computer Vision, build the proof of concept, and make the business case for it.</p>
                     <div class="cta-buttons">
                         <a href="#contact" class="btn btn-primary">
                             <i class="fas fa-envelope" aria-hidden="true"></i>
-                            <span data-i18n="hero.cta">Get In Touch</span>
+                            <span data-i18n="hero.cta">Get in touch</span>
                         </a>
                         <a href="https://www.linkedin.com/in/matias-nahuel-araujo/" class="btn btn-secondary" target="_blank" rel="noopener">
                             <i class="fab fa-linkedin" aria-hidden="true"></i>
-                            <span data-i18n="hero.linkedin">LinkedIn Profile</span>
+                            <span data-i18n="hero.linkedin">LinkedIn profile</span>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="quote-band" aria-label="Motto">
-            <div class="container">
-                <blockquote lang="en">
-                    <i class="fas fa-quote-left" aria-hidden="true"></i>
-                    <p>The world that we live in is what we make it.</p>
-                </blockquote>
-            </div>
+        <section class="motto" aria-label="Motto">
+            <blockquote lang="en" class="container">
+                <span class="motto-lead">The world we live in is</span>
+                <span class="motto-punch">what we make it</span>
+            </blockquote>
         </section>
 
         <section id="about" class="section about">
             <div class="container">
-                <h2 class="section-title" data-i18n="about.title">About Me</h2>
+                <h2 class="section-title" data-i18n="about.title">About me</h2>
                 <div class="about-content">
                     <div class="about-text">
                         <p data-i18n="about.p1">I grew up taking things apart, figuring out how they worked, and putting them back together (big air quotes on that last part). That curiosity never left, it just scaled: from watches to systems, from circuits to AI.</p>
@@ -872,7 +1072,8 @@
             <div class="container">
                 <h2 class="section-title" data-i18n="exp.title">Experience</h2>
                 <div class="timeline">
-                    <article class="timeline-item">
+                    <span class="timeline-trace" aria-hidden="true"></span>
+                    <article class="timeline-item lit">
                         <div class="timeline-head">
                             <h3 data-i18n="exp.flock.role">R&amp;D Specialist</h3>
                             <span class="timeline-date" data-i18n="exp.flock.date">Nov 2022 – Present</span>
@@ -885,7 +1086,7 @@
                             <li data-i18n="exp.flock.b4">Sharing the outcomes of Design Thinking processes with the rest of the team.</li>
                         </ul>
                     </article>
-                    <article class="timeline-item">
+                    <article class="timeline-item lit">
                         <div class="timeline-head">
                             <h3 data-i18n="exp.link.role">Innovation &amp; New Technologies Analyst</h3>
                             <span class="timeline-date" data-i18n="exp.link.date">Jun 2017 – Nov 2022</span>
@@ -898,7 +1099,7 @@
                             <li data-i18n="exp.link.b4">Incremental and disruptive innovation, adding new features to the channels and sharing the knowledge gained across the company.</li>
                         </ul>
                     </article>
-                    <article class="timeline-item">
+                    <article class="timeline-item lit">
                         <div class="timeline-head">
                             <h3 data-i18n="exp.pds.role">Software Developer</h3>
                             <span class="timeline-date" data-i18n="exp.pds.date">Mar 2017 – May 2017</span>
@@ -908,7 +1109,7 @@
                             <li data-i18n="exp.pds.b1">Software for POS terminals, mobile payments and contactless smartcards, on both the hardware and software side.</li>
                         </ul>
                     </article>
-                    <article class="timeline-item">
+                    <article class="timeline-item lit">
                         <div class="timeline-head">
                             <h3 data-i18n="exp.dynamo.role">Technical Consultant, SIM Card Solutions</h3>
                             <span class="timeline-date" data-i18n="exp.dynamo.date">Sep 2015 – Mar 2017</span>
@@ -919,7 +1120,7 @@
                             <li data-i18n="exp.dynamo.b2">Proofs of concept and technical liaison with partners, clients and other companies.</li>
                         </ul>
                     </article>
-                    <article class="timeline-item">
+                    <article class="timeline-item lit">
                         <div class="timeline-head">
                             <h3 data-i18n="exp.gemalto.role">Card Software Trainee</h3>
                             <span class="timeline-date" data-i18n="exp.gemalto.date">Mar 2014 – Aug 2015</span>
@@ -930,7 +1131,7 @@
                             <li data-i18n="exp.gemalto.b2">Card validations for Advanced-OTA (LTE) platforms and Android proofs of concept using the OpenMobile API.</li>
                         </ul>
                     </article>
-                    <article class="timeline-item">
+                    <article class="timeline-item lit">
                         <div class="timeline-head">
                             <h3 data-i18n="exp.early.role">Earlier roles</h3>
                             <span class="timeline-date">2009 – 2011</span>
@@ -940,6 +1141,55 @@
                             <li data-i18n="exp.early.b2"><strong>Mitrol</strong> · Intern: telephony hardware repair and transcriptions for speech recognition systems (Jun – Dec 2009).</li>
                         </ul>
                     </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="capabilities" class="section capabilities">
+            <div class="container">
+                <h2 class="section-title" data-i18n="cap.title">Builder + Business</h2>
+                <p class="section-intro" data-i18n="cap.intro">Engineering taught me how to build it. The MBT taught me whether it's worth building, and how to make the numbers work.</p>
+                <div class="cap-split">
+                    <div class="cap-col builder">
+                        <h3><i class="fas fa-microchip" aria-hidden="true"></i><span data-i18n="cap.build.title">Builder</span></h3>
+                        <p class="cap-sub" data-i18n="cap.build.sub">Electronics Engineering and more than a decade in R&amp;D.</p>
+                        <ul class="cap-list">
+                            <li>
+                                <h4 data-i18n="cap.ai.title">AI &amp; Computer Vision</h4>
+                                <p data-i18n="cap.ai.desc">Machine learning models, conversational chatbots with NLP and GenAI, and computer vision applied to real business problems.</p>
+                            </li>
+                            <li>
+                                <h4>Blockchain &amp; DeFi</h4>
+                                <p data-i18n="cap.bc.desc">Smart contracts in Solidity, DeFi solutions and blockchain integrations, with a focus on crypto ecosystems and tokenization.</p>
+                            </li>
+                            <li>
+                                <h4 data-i18n="cap.fin.title">Fintech &amp; Payments</h4>
+                                <p data-i18n="cap.fin.desc">Payment systems, contactless and NFC, biometrics, SIM card applets and hardware-software integration for financial services.</p>
+                            </li>
+                            <li>
+                                <h4 data-i18n="cap.rd.title">R&amp;D and prototyping</h4>
+                                <p data-i18n="cap.rd.desc">Technology scouting, proofs of concept and Design Thinking to go from "what if" to something you can test.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cap-col business">
+                        <h3><i class="fas fa-chart-line" aria-hidden="true"></i><span data-i18n="cap.biz.title">Business</span></h3>
+                        <p class="cap-sub" data-i18n="cap.biz.sub">Master in Business &amp; Technology, Universidad de San Andrés.</p>
+                        <ul class="cap-list">
+                            <li>
+                                <h4 data-i18n="cap.strategy.title">Strategy &amp; business models</h4>
+                                <p data-i18n="cap.strategy.desc">Business model design, competitive analysis and strategy for new products or verticals. I took Mingo, my MBT final project, from idea to business model.</p>
+                            </li>
+                            <li>
+                                <h4 data-i18n="cap.finance.title">Finance</h4>
+                                <p data-i18n="cap.finance.desc">Business cases, financial projections, valuation and investment analysis, so a technology bet comes with numbers attached.</p>
+                            </li>
+                            <li>
+                                <h4 data-i18n="cap.bridge.title">Where both meet</h4>
+                                <p data-i18n="cap.bridge.desc">Turning an emerging technology into a business opportunity: what problem it solves, for whom, and whether it pays off, before writing a line of code.</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -957,8 +1207,7 @@
                             </div>
                         </div>
                         <div class="project">
-                            <p class="project-label" data-i18n="edu.mbt.label">Final project</p>
-                            <h4><a href="https://mingo.ar" target="_blank" rel="noopener">Mingo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></h4>
+                            <h4><a href="https://mingo.ar" target="_blank" rel="noopener">Mingo<i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a> <span class="project-kind" data-i18n="edu.mbt.kind">· final project</span></h4>
                             <p data-i18n="edu.mbt.desc">An agricultural crowdfunding platform designed to make investing in agro easy, accessible and safe: investors fund verified production projects such as regenerative livestock, extensive farming and pecan nuts, while producers gain a new source of financing. We took it as far as the business model and landing page; it did not reach launch.</p>
                         </div>
                     </article>
@@ -971,7 +1220,6 @@
                             </div>
                         </div>
                         <div class="project">
-                            <p class="project-label" data-i18n="edu.utn.label">Publication</p>
                             <p lang="es" class="paper-title"><em>Evaluación y detección de potenciales evocados sobre una interfaz cerebro computadora</em></p>
                             <p class="paper-meta">M. Araujo, N. González, F. Pose · ARANDUCON 2016</p>
                             <a href="assets/papers/araujo-2016-potenciales-evocados-bci.pdf" class="paper-link" target="_blank" rel="noopener">
@@ -997,47 +1245,37 @@
             </div>
         </section>
 
-        <section id="skills" class="section skills">
+        <section id="notes" class="section notes">
             <div class="container">
-                <h2 class="section-title" data-i18n="skills.title">Skills &amp; Expertise</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-brain" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="skill-title" data-i18n="skills.ai.title">AI &amp; Computer Vision</h3>
-                        <p class="skill-description" data-i18n="skills.ai.desc">Machine learning models, conversational chatbots with NLP and GenAI, and computer vision solutions applied to real business problems.</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-lightbulb" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="skill-title" data-i18n="skills.inn.title">Innovation Research</h3>
-                        <p class="skill-description" data-i18n="skills.inn.desc">Technology scouting, proof-of-concept development, Design Thinking facilitation and analysis of emerging technologies for new business.</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-cubes" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="skill-title">Blockchain &amp; DeFi</h3>
-                        <p class="skill-description" data-i18n="skills.bc.desc">Smart contracts with Solidity, DeFi solutions and blockchain integrations, with a focus on crypto ecosystems and tokenization.</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-credit-card" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="skill-title" data-i18n="skills.fin.title">Fintech &amp; Payments</h3>
-                        <p class="skill-description" data-i18n="skills.fin.desc">Payment systems, contactless and NFC technology, biometrics, SIM card applets and hardware-software integration for financial services.</p>
-                    </div>
-                </div>
+                <h2 class="section-title" data-i18n="notes.title">Notes</h2>
+                <p class="section-intro" data-i18n="notes.intro">Things I'm thinking about, testing or taking apart.</p>
+                {% if site.posts.size > 0 %}
+                <ul class="notes-list">
+                    {% for post in site.posts limit:3 %}
+                    <li>
+                        <a href="{{ post.url | relative_url }}">
+                            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d/%m/%Y" }}</time>
+                            <span class="note-title" lang="{{ post.lang | default: 'es' }}">{{ post.title }}</span>
+                            {% if post.description %}<span class="note-desc" lang="{{ post.lang | default: 'es' }}">{{ post.description }}</span>{% endif %}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <a class="notes-more" href="/notes/" data-i18n="notes.all">All notes</a>
+                {% else %}
+                <p class="notes-empty">
+                    <i class="fas fa-screwdriver-wrench" aria-hidden="true"></i>
+                    <span data-i18n="notes.empty">The first note is still on the workbench. Coming soon.</span>
+                </p>
+                {% endif %}
             </div>
         </section>
 
         <section id="contact" class="section contact">
             <div class="container">
-                <h2 class="section-title" data-i18n="contact.title">Let's Connect</h2>
+                <h2 class="section-title" data-i18n="contact.title">Let's talk</h2>
                 <div class="contact-content">
-                    <p class="contact-description" data-i18n="contact.desc">If any of this resonated with you, let's talk!</p>
+                    <p class="contact-description" data-i18n="contact.desc">If any of this resonated with you, whether it's a role, a project or an idea, let's talk!</p>
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/matias-nahuel-araujo/" class="social-link" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
                             <i class="fab fa-linkedin" aria-hidden="true"></i>
@@ -1063,17 +1301,21 @@
     </footer>
 
     <script>
-        // Language switch (English markup is the default; Spanish strings live here)
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // ---------- Language switch ----------
+        // English lives in the markup; Spanish strings live here, keyed by data-i18n.
         const translations = {
             es: {
+                "title": "Matias Nahuel Araujo | Innovación e I+D",
                 "nav.about": "Sobre mí",
                 "nav.experience": "Experiencia",
+                "nav.capabilities": "Qué hago",
                 "nav.education": "Educación",
-                "nav.skills": "Skills",
+                "nav.notes": "Notas",
                 "nav.contact": "Contacto",
-                "hero.title": "Hola, soy Matias Nahuel Araujo",
-                "hero.subtitle": "Innovación I+D | Ingeniero Electrónico | Master in Business &amp; Technology",
-                "hero.description": "Exploro tecnologías emergentes como IA, Blockchain, Computer Vision y NLP, y las convierto en pruebas de concepto y nuevas oportunidades de negocio. Ingeniero Electrónico (UTN) y Master in Business &amp; Technology por la Universidad de San Andrés.",
+                "hero.roles": "Innovación I+D, Ingeniero Electrónico, Master in Business &amp; Technology",
+                "hero.description": "Exploro tecnologías emergentes como IA, Blockchain y Computer Vision, construyo la prueba de concepto y armo el caso de negocio.",
                 "hero.cta": "Hablemos",
                 "hero.linkedin": "Perfil de LinkedIn",
                 "about.title": "Sobre mí",
@@ -1107,71 +1349,430 @@
                 "exp.early.role": "Primeros pasos",
                 "exp.early.b1": "<strong>Tesis OyS</strong> · Programador en Drupal y administración de servidores (dic. 2010 – jul. 2011).",
                 "exp.early.b2": "<strong>Mitrol</strong> · Pasante: reparación de hardware de telefonía y transcripciones para sistemas de reconocimiento de voz (jun. – dic. 2009).",
+                "cap.title": "Técnica + Negocio",
+                "cap.intro": "La ingeniería me enseñó a construirlo. El MBT, a saber si vale la pena construirlo y cómo hacer que los números cierren.",
+                "cap.build.title": "Técnica",
+                "cap.build.sub": "Ingeniería Electrónica y más de una década en I+D.",
+                "cap.ai.title": "IA y Computer Vision",
+                "cap.ai.desc": "Modelos de machine learning, chatbots conversacionales con NLP y GenAI, y computer vision aplicada a problemas reales de negocio.",
+                "cap.bc.desc": "Smart contracts en Solidity, soluciones DeFi e integraciones con blockchains, con foco en ecosistemas crypto y tokenización.",
+                "cap.fin.title": "Fintech y pagos",
+                "cap.fin.desc": "Sistemas de pago, contactless y NFC, biometría, applets para SIM cards e integración hardware-software para servicios financieros.",
+                "cap.rd.title": "I+D y prototipos",
+                "cap.rd.desc": "Scouting tecnológico, pruebas de concepto y Design Thinking para pasar del \"¿y si...?\" a algo que se pueda probar.",
+                "cap.biz.title": "Negocio",
+                "cap.biz.sub": "Master in Business &amp; Technology, Universidad de San Andrés.",
+                "cap.strategy.title": "Estrategia y modelos de negocio",
+                "cap.strategy.desc": "Diseño de modelos de negocio, análisis competitivo y estrategia para nuevos productos o verticales. Llevé Mingo, mi trabajo final del MBT, de la idea al modelo de negocio.",
+                "cap.finance.title": "Finanzas",
+                "cap.finance.desc": "Business cases, proyecciones financieras, valuación y análisis de inversiones, para que una apuesta tecnológica venga con números.",
+                "cap.bridge.title": "Donde se juntan",
+                "cap.bridge.desc": "Convertir una tecnología emergente en una oportunidad de negocio: qué problema resuelve, para quién y si cierra, antes de escribir una línea de código.",
                 "edu.title": "Educación",
                 "edu.mbt.school": "Escuela de Negocios, Universidad de San Andrés · 2024 – 2026",
-                "edu.mbt.label": "Trabajo final",
+                "edu.mbt.kind": "· trabajo final",
                 "edu.mbt.desc": "Una plataforma de crowdfunding agropecuario pensada para que invertir en agro sea fácil, accesible y seguro: los inversores financian proyectos productivos verificados, como ganadería regenerativa, agricultura extensiva y nuez pecán, y los productores acceden a una nueva fuente de financiamiento. Llegamos hasta el modelo de negocio y la landing; no llegó a lanzarse.",
                 "edu.utn.title": "Ingeniería Electrónica",
-                "edu.utn.label": "Publicación",
                 "edu.utn.pdf": "Leer el paper (PDF)",
                 "edu.courses.title": "Cursos",
                 "edu.courses.defy": "Ecosistema Crypto &amp; DeFi 101",
-                "skills.title": "Skills y especialidades",
-                "skills.ai.title": "IA y Computer Vision",
-                "skills.ai.desc": "Modelos de machine learning, chatbots conversacionales con NLP y GenAI, y soluciones de computer vision aplicadas a problemas reales de negocio.",
-                "skills.inn.title": "Investigación e innovación",
-                "skills.inn.desc": "Scouting tecnológico, desarrollo de pruebas de concepto, facilitación de Design Thinking y análisis de tecnologías emergentes para nuevos negocios.",
-                "skills.bc.desc": "Smart contracts con Solidity, soluciones DeFi e integraciones con blockchains, con foco en ecosistemas crypto y tokenización.",
-                "skills.fin.title": "Fintech y pagos",
-                "skills.fin.desc": "Sistemas de pago, tecnología contactless y NFC, biometría, applets para SIM cards e integración hardware-software para servicios financieros.",
+                "notes.title": "Notas",
+                "notes.intro": "Cosas que estoy pensando, probando o desarmando.",
+                "notes.all": "Todas las notas",
+                "notes.empty": "La primera nota todavía está en el banco de trabajo. Próximamente.",
                 "contact.title": "Hablemos",
-                "contact.desc": "Si te sentiste identificado con algo de esto, ¡hablemos!",
-                "footer.rights": "Todos los derechos reservados.",
-                "title": "Matias Nahuel Araujo | Innovación e I+D"
+                "contact.desc": "Si te sentiste identificado con algo de esto, ya sea un rol, un proyecto o una idea, ¡hablemos!",
+                "footer.rights": "Todos los derechos reservados."
             }
         };
+        const roles = {
+            en: ['Electronics Engineer', 'Innovation & R&D specialist', 'Master in Business & Technology', 'professional thing-taker-aparter'],
+            es: ['Ingeniero Electrónico', 'especialista en Innovación e I+D', 'Master in Business & Technology', 'desarmador profesional de cosas']
+        };
+
         const i18nNodes = document.querySelectorAll('[data-i18n]');
         const english = { title: document.title };
         i18nNodes.forEach(node => { english[node.dataset.i18n] = node.innerHTML; });
         const langToggle = document.querySelector('.lang-toggle');
+        let currentLang = 'en';
+
+        // ---------- Typed role line ----------
+        const typer = (() => {
+            const el = document.querySelector('.typed');
+            let timer = null;
+            let roleIndex = 0;
+            let chars = 0;
+            let deleting = false;
+
+            const tick = () => {
+                const list = roles[currentLang];
+                const word = list[roleIndex % list.length];
+                if (!deleting) {
+                    chars++;
+                    el.textContent = word.slice(0, chars);
+                    if (chars === word.length) {
+                        deleting = true;
+                        timer = setTimeout(tick, 2200);
+                        return;
+                    }
+                    timer = setTimeout(tick, 55 + Math.random() * 45);
+                } else {
+                    chars--;
+                    el.textContent = word.slice(0, chars);
+                    if (chars === 0) {
+                        deleting = false;
+                        roleIndex++;
+                        timer = setTimeout(tick, 350);
+                        return;
+                    }
+                    timer = setTimeout(tick, 28);
+                }
+            };
+
+            return {
+                restart() {
+                    clearTimeout(timer);
+                    roleIndex = 0;
+                    if (reduceMotion) {
+                        el.textContent = roles[currentLang].slice(0, 3).join(' · ');
+                        return;
+                    }
+                    const word = roles[currentLang][0];
+                    chars = word.length;
+                    el.textContent = word;
+                    deleting = true;
+                    timer = setTimeout(tick, 2200);
+                }
+            };
+        })();
+
         const setLanguage = (lang) => {
+            currentLang = lang;
             const dict = lang === 'es' ? translations.es : english;
             i18nNodes.forEach(node => { node.innerHTML = dict[node.dataset.i18n] ?? english[node.dataset.i18n]; });
             document.title = dict.title;
             document.documentElement.lang = lang;
             langToggle.textContent = lang === 'es' ? 'EN' : 'ES';
             langToggle.setAttribute('aria-label', lang === 'es' ? 'Switch to English' : 'Cambiar a español');
+            typer.restart();
         };
-        let currentLang = 'en';
+
         try {
             currentLang = localStorage.getItem('lang') || ((navigator.language || '').toLowerCase().startsWith('es') ? 'es' : 'en');
         } catch (e) {}
-        if (currentLang === 'es') setLanguage('es');
+        setLanguage(currentLang);
         langToggle.addEventListener('click', () => {
-            currentLang = currentLang === 'es' ? 'en' : 'es';
-            setLanguage(currentLang);
+            setLanguage(currentLang === 'es' ? 'en' : 'es');
             try { localStorage.setItem('lang', currentLang); } catch (e) {}
         });
 
-        // Easter egg: click the profile photo five times in a row
-        const eggToast = document.querySelector('.egg-toast');
-        const eggText = {
-            en: '<strong>🏆 Achievement unlocked</strong>Top of the class, Merit Award and Best GPA... in high school. Nobody asked, but here it is.',
-            es: '<strong>🏆 Logro desbloqueado</strong>Mejor Promedio de la Promoción, Mejor Promedio y Al Mérito... del secundario. Nadie preguntó, pero acá está.'
-        };
-        let eggClicks = 0, eggReset, eggHide;
-        document.querySelector('.profile-img').addEventListener('click', () => {
-            clearTimeout(eggReset);
-            eggReset = setTimeout(() => { eggClicks = 0; }, 1500);
-            if (++eggClicks < 5) return;
-            eggClicks = 0;
-            eggToast.innerHTML = eggText[currentLang];
-            eggToast.classList.add('show');
-            clearTimeout(eggHide);
-            eggHide = setTimeout(() => eggToast.classList.remove('show'), 6000);
-        });
+        // ---------- PCB hero ----------
+        // Procedural traces routed on a grid with 45° bends. They light up around the
+        // pointer, and signal pulses travel along them.
+        const board = (() => {
+            const canvas = document.getElementById('pcb');
+            const hero = canvas.parentElement;
+            const ctx = canvas.getContext('2d');
+            const base = document.createElement('canvas');
+            const bctx = base.getContext('2d');
+            const CYAN = '0, 217, 255';
+            const DIRS = [[1, 0], [1, 1], [0, 1], [-1, 1], [-1, 0], [-1, -1], [0, -1], [1, -1]];
+            let traces = [];
+            let pulses = [];
+            let width = 0, height = 0, dpr = 1, step = 26;
+            let pointer = null;
+            let surge = 0;
+            let running = false;
+            let visible = true;
+            let last = 0;
 
-        // Mobile navigation menu
+            const pathOf = (c, points) => {
+                c.beginPath();
+                c.moveTo(points[0][0], points[0][1]);
+                for (let i = 1; i < points.length; i++) c.lineTo(points[i][0], points[i][1]);
+            };
+
+            const build = () => {
+                const rect = hero.getBoundingClientRect();
+                width = rect.width;
+                height = rect.height;
+                dpr = Math.min(window.devicePixelRatio || 1, 2);
+                step = width < 700 ? 22 : 26;
+                for (const c of [canvas, base]) {
+                    c.width = Math.round(width * dpr);
+                    c.height = Math.round(height * dpr);
+                }
+
+                const cols = Math.ceil(width / step) + 1;
+                const rows = Math.ceil(height / step) + 1;
+                const used = new Uint8Array(cols * rows);
+
+                // Keep the area behind the text quiet so it stays readable.
+                // On phones the text spans the full width, so only thin it out there.
+                const content = hero.querySelector('.hero-content');
+                const first = content.firstElementChild.getBoundingClientRect();
+                const lastEl = content.lastElementChild.getBoundingClientRect();
+                const pad = width < 700 ? 0 : step;
+                const x0 = Math.floor((first.left - rect.left - pad) / step);
+                const x1 = Math.ceil((Math.max(first.right, lastEl.right, content.getBoundingClientRect().right) - rect.left + pad) / step);
+                const y0 = Math.floor((first.top - rect.top - pad) / step);
+                const y1 = Math.ceil((lastEl.bottom - rect.top + pad) / step);
+                const quiet = width < 700 ? 0.6 : 1;
+                for (let y = y0; y <= y1; y++) {
+                    for (let x = x0; x <= x1; x++) {
+                        if (x >= 0 && y >= 0 && x < cols && y < rows && Math.random() < quiet) used[y * cols + x] = 1;
+                    }
+                }
+
+                const free = (x, y) => x >= 0 && y >= 0 && x < cols && y < rows && !used[y * cols + x];
+                const target = Math.round((width * height) / (width < 700 ? 9000 : 7000));
+                traces = [];
+                let attempts = 0;
+                while (traces.length < target && attempts < target * 12) {
+                    attempts++;
+                    let x = Math.floor(Math.random() * cols);
+                    let y = Math.floor(Math.random() * rows);
+                    if (!free(x, y)) continue;
+                    let dir = Math.floor(Math.random() * 4) * 2;
+                    const pts = [[x, y]];
+                    used[y * cols + x] = 1;
+                    const segments = 2 + Math.floor(Math.random() * 3);
+                    for (let s = 0; s < segments; s++) {
+                        if (s > 0) dir = (dir + (Math.random() < 0.5 ? 1 : 7)) % 8;
+                        const len = 2 + Math.floor(Math.random() * 7);
+                        let moved = 0;
+                        for (let i = 0; i < len; i++) {
+                            const nx = x + DIRS[dir][0];
+                            const ny = y + DIRS[dir][1];
+                            if (!free(nx, ny)) break;
+                            x = nx; y = ny;
+                            used[y * cols + x] = 1;
+                            moved++;
+                        }
+                        if (!moved) break;
+                        pts.push([x, y]);
+                    }
+                    if (pts.length < 2) continue;
+                    const points = pts.map(([px, py]) => [px * step + step / 2, py * step + step / 2]);
+                    let length = 0;
+                    for (let i = 1; i < points.length; i++) {
+                        length += Math.hypot(points[i][0] - points[i - 1][0], points[i][1] - points[i - 1][1]);
+                    }
+                    if (length < step * 3) continue;
+                    traces.push({ points, length, glow: 0 });
+                }
+
+                // Static layer: dim traces, vias at the start, pads at the end.
+                bctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                bctx.clearRect(0, 0, width, height);
+                bctx.lineCap = 'round';
+                bctx.lineJoin = 'round';
+                for (const t of traces) {
+                    bctx.strokeStyle = `rgba(${CYAN}, ${width < 700 ? 0.12 : 0.16})`;
+                    bctx.lineWidth = 2;
+                    pathOf(bctx, t.points);
+                    bctx.stroke();
+                    const [sx, sy] = t.points[0];
+                    const [ex, ey] = t.points[t.points.length - 1];
+                    bctx.lineWidth = 1.5;
+                    bctx.strokeStyle = `rgba(${CYAN}, 0.28)`;
+                    bctx.beginPath();
+                    bctx.arc(sx, sy, 3.5, 0, Math.PI * 2);
+                    bctx.stroke();
+                    bctx.fillStyle = `rgba(${CYAN}, 0.28)`;
+                    bctx.beginPath();
+                    bctx.arc(ex, ey, 3, 0, Math.PI * 2);
+                    bctx.fill();
+                }
+                pulses = [];
+            };
+
+            const pointAt = (t, dist) => {
+                let d = dist;
+                for (let i = 1; i < t.points.length; i++) {
+                    const [ax, ay] = t.points[i - 1];
+                    const [bx, by] = t.points[i];
+                    const seg = Math.hypot(bx - ax, by - ay);
+                    if (d <= seg) return [ax + (bx - ax) * (d / seg), ay + (by - ay) * (d / seg)];
+                    d -= seg;
+                }
+                return t.points[t.points.length - 1];
+            };
+
+            const distanceTo = (t, px, py) => {
+                let best = Infinity;
+                for (let i = 1; i < t.points.length; i++) {
+                    const [ax, ay] = t.points[i - 1];
+                    const [bx, by] = t.points[i];
+                    const dx = bx - ax, dy = by - ay;
+                    const k = Math.max(0, Math.min(1, ((px - ax) * dx + (py - ay) * dy) / (dx * dx + dy * dy)));
+                    best = Math.min(best, Math.hypot(px - (ax + dx * k), py - (ay + dy * k)));
+                }
+                return best;
+            };
+
+            const spawnPulse = () => {
+                if (!traces.length) return;
+                const t = traces[Math.floor(Math.random() * traces.length)];
+                pulses.push({ t, d: 0, speed: 140 + Math.random() * 120 });
+            };
+
+            const draw = (now) => {
+                const dt = Math.min(0.05, (now - last) / 1000 || 0);
+                last = now;
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                ctx.clearRect(0, 0, width, height);
+                ctx.drawImage(base, 0, 0, width, height);
+                ctx.lineCap = 'round';
+                ctx.lineJoin = 'round';
+
+                surge = Math.max(0, surge - dt * 0.6);
+                const radius = width < 700 ? 110 : 170;
+                for (const t of traces) {
+                    let target = surge;
+                    if (pointer) {
+                        const d = distanceTo(t, pointer.x, pointer.y);
+                        if (d < radius) target = Math.max(target, 1 - d / radius);
+                    }
+                    t.glow += (target - t.glow) * Math.min(1, dt * 9);
+                    if (t.glow > 0.02) {
+                        ctx.strokeStyle = `rgba(${CYAN}, ${0.85 * t.glow})`;
+                        ctx.lineWidth = 2;
+                        pathOf(ctx, t.points);
+                        ctx.stroke();
+                        const [ex, ey] = t.points[t.points.length - 1];
+                        ctx.fillStyle = `rgba(${CYAN}, ${t.glow})`;
+                        ctx.beginPath();
+                        ctx.arc(ex, ey, 3, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+                }
+
+                if (!reduceMotion) {
+                    const wanted = Math.max(3, Math.round(traces.length / 14));
+                    if (pulses.length < wanted && Math.random() < dt * 4) spawnPulse();
+                    pulses = pulses.filter(p => p.d < p.t.length + 40);
+                    for (const p of pulses) {
+                        p.d += p.speed * dt;
+                        const head = Math.min(p.d, p.t.length);
+                        const tail = Math.max(0, p.d - 46);
+                        if (tail >= p.t.length) continue;
+                        const a = pointAt(p.t, tail);
+                        const b = pointAt(p.t, head);
+                        const grad = ctx.createLinearGradient(a[0], a[1], b[0], b[1]);
+                        grad.addColorStop(0, `rgba(${CYAN}, 0)`);
+                        grad.addColorStop(1, `rgba(${CYAN}, 0.95)`);
+                        ctx.strokeStyle = grad;
+                        ctx.lineWidth = 2.5;
+                        ctx.beginPath();
+                        ctx.moveTo(a[0], a[1]);
+                        for (let s = tail + 6; s < head; s += 6) {
+                            const q = pointAt(p.t, s);
+                            ctx.lineTo(q[0], q[1]);
+                        }
+                        ctx.lineTo(b[0], b[1]);
+                        ctx.stroke();
+                        if (p.d <= p.t.length) {
+                            ctx.fillStyle = '#FFFFFF';
+                            ctx.beginPath();
+                            ctx.arc(b[0], b[1], 2, 0, Math.PI * 2);
+                            ctx.fill();
+                        }
+                    }
+                }
+
+                const idle = reduceMotion && !pointer && surge === 0 && traces.every(t => t.glow < 0.02);
+                if (visible && !document.hidden && !idle) {
+                    requestAnimationFrame(draw);
+                } else {
+                    running = false;
+                }
+            };
+
+            const start = () => {
+                if (running) return;
+                running = true;
+                last = performance.now();
+                requestAnimationFrame(draw);
+            };
+
+            const setPointer = (e) => {
+                const r = canvas.getBoundingClientRect();
+                pointer = { x: e.clientX - r.left, y: e.clientY - r.top };
+                start();
+            };
+            hero.addEventListener('pointermove', setPointer);
+            hero.addEventListener('pointerdown', setPointer);
+            hero.addEventListener('pointerleave', () => { pointer = null; });
+
+            new IntersectionObserver(([entry]) => {
+                visible = entry.isIntersecting;
+                if (visible) start();
+            }).observe(hero);
+            document.addEventListener('visibilitychange', () => { if (!document.hidden) start(); });
+
+            let resizeTimer;
+            let lastWidth = 0;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => {
+                    if (Math.abs(hero.getBoundingClientRect().width - lastWidth) < 2) return;
+                    lastWidth = hero.getBoundingClientRect().width;
+                    build();
+                    start();
+                }, 200);
+            });
+
+            const init = () => {
+                lastWidth = hero.getBoundingClientRect().width;
+                build();
+                start();
+            };
+            if (document.fonts && document.fonts.ready) document.fonts.ready.then(init); else init();
+
+            return {
+                surge() {
+                    surge = 1;
+                    for (let i = 0; i < 12; i++) spawnPulse();
+                    start();
+                }
+            };
+        })();
+
+        // ---------- Experience: trace routes as you scroll ----------
+        (() => {
+            const timeline = document.querySelector('.timeline');
+            const items = [...timeline.querySelectorAll('.timeline-item')];
+            if (reduceMotion) return;
+            let ticking = false;
+            const update = () => {
+                ticking = false;
+                const rect = timeline.getBoundingClientRect();
+                const reach = window.innerHeight * 0.65 - rect.top;
+                const pct = Math.max(0, Math.min(1, reach / rect.height));
+                timeline.style.setProperty('--progress', `${(pct * 100).toFixed(2)}%`);
+                items.forEach(item => {
+                    item.classList.toggle('lit', item.offsetTop + 8 <= reach);
+                });
+            };
+            const onScroll = () => {
+                if (!ticking) {
+                    ticking = true;
+                    requestAnimationFrame(update);
+                }
+            };
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', onScroll);
+            update();
+        })();
+
+        // ---------- Header ----------
+        const header = document.querySelector('header');
+        const onHeaderScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
+        window.addEventListener('scroll', onHeaderScroll, { passive: true });
+        onHeaderScroll();
+
+        // ---------- Mobile navigation ----------
         const navToggle = document.querySelector('.nav-toggle');
         const navLinks = document.getElementById('nav-links');
         const setMenu = (open) => {
@@ -1181,21 +1782,56 @@
         };
         navToggle.addEventListener('click', () => setMenu(!navLinks.classList.contains('open')));
         navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') setMenu(false);
+
+        // ---------- Easter eggs ----------
+        const eggToast = document.querySelector('.egg-toast');
+        let eggHide;
+        const toast = (html) => {
+            eggToast.innerHTML = html;
+            eggToast.classList.add('show');
+            clearTimeout(eggHide);
+            eggHide = setTimeout(() => eggToast.classList.remove('show'), 6000);
+        };
+
+        // 1. Click the profile photo five times in a row.
+        const eggText = {
+            en: '<strong><i class="fas fa-trophy" aria-hidden="true"></i>Achievement unlocked</strong>Top of the class, Merit Award and Best GPA... in high school. Nobody asked, but here it is.',
+            es: '<strong><i class="fas fa-trophy" aria-hidden="true"></i>Logro desbloqueado</strong>Mejor Promedio de la Promoción, Mejor Promedio y Al Mérito... del secundario. Nadie preguntó, pero acá está.'
+        };
+        let eggClicks = 0, eggReset;
+        document.querySelector('.profile-img').addEventListener('click', () => {
+            clearTimeout(eggReset);
+            eggReset = setTimeout(() => { eggClicks = 0; }, 1500);
+            if (++eggClicks < 5) return;
+            eggClicks = 0;
+            toast(eggText[currentLang]);
         });
 
-        // Add scroll effect to header
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(10, 14, 39, 0.98)';
-                header.style.backdropFilter = 'blur(15px)';
-            } else {
-                header.style.background = 'rgba(10, 14, 39, 0.95)';
-                header.style.backdropFilter = 'blur(10px)';
+        // 2. Konami code powers up the board.
+        const konami = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+        const surgeText = {
+            en: '<strong><i class="fas fa-bolt" aria-hidden="true"></i>Power surge</strong>Board fully energized. Nothing caught fire this time.',
+            es: '<strong><i class="fas fa-bolt" aria-hidden="true"></i>Sobretensión</strong>Placa energizada al máximo. Esta vez no se quemó nada.'
+        };
+        let konamiPos = 0;
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') setMenu(false);
+            const key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+            konamiPos = key === konami[konamiPos] ? konamiPos + 1 : (key === konami[0] ? 1 : 0);
+            if (konamiPos === konami.length) {
+                konamiPos = 0;
+                window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+                board.surge();
+                toast(surgeText[currentLang]);
             }
         });
+
+        // 3. A note for whoever opens the console.
+        console.log(
+            '%cHola, curioso/a%c\n¿Desarmando la página para ver cómo funciona? Me caés bien.\nTaking the page apart to see how it works? I like you already.\n\n→ matias.araujo@outlook.com · linkedin.com/in/matias-nahuel-araujo\n\nP.S. ↑ ↑ ↓ ↓ ← → ← → B A',
+            'font: 700 18px Oswald, sans-serif; color: #00D9FF;',
+            'font: 13px Inter, sans-serif; color: inherit;'
+        );
     </script>
 </body>
 </html>

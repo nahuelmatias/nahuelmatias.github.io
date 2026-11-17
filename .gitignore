@@ -2,3 +2,8 @@
 Thumbs.db
 .vscode/
 .idea/
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.claude/skills/impeccable/scripts/bin/
+.impeccable/config.local.json

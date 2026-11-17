@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <meta property="og:type" content="{% if page.layout == 'note' %}article{% else %}website{% endif %}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:title" content="{{ page.title | default: site.title }}">
+    <meta property="og:description" content="{{ page.description | default: site.description }}">
+    <meta property="og:image" content="{{ page.image | default: '/assets/images/profile-photo.jpg' | absolute_url }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="theme-color" content="#0A0E27">
+    <link rel="alternate" type="application/atom+xml" title="Notes · {{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+    <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ '/assets/css/notes.css' | relative_url }}">
+</head>
+<body>
+    {% assign es = true %}{% if page.lang == 'en' %}{% assign es = false %}{% endif %}
+    <header class="bar">
+        <div class="wrap">
+            <a class="logo" href="{{ '/' | relative_url }}">Matias Nahuel Araujo</a>
+            <a class="back" href="{{ '/notes/' | relative_url }}">
+                <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                {% if page.layout == 'note' %}{% if es %}Todas las notas{% else %}All notes{% endif %}{% else %}{% if es %}Volver al inicio{% else %}Back home{% endif %}{% endif %}
+            </a>
+        </div>
+    </header>
+    <main class="wrap">
+        {{ content }}
+    </main>
+    <footer>
+        <div class="wrap">
+            <a href="{{ '/' | relative_url }}">matiasaraujo.ar</a> · <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+        </div>
+    </footer>
+</body>
+</html>

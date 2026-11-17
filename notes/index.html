@@ -1,0 +1,25 @@
+---
+layout: base
+title: Notas
+description: Cosas que estoy pensando, probando o desarmando.
+lang: es
+---
+<section class="notes-index">
+    <h1>Notas</h1>
+    <p class="lede">Cosas que estoy pensando, probando o desarmando. <span lang="en">Things I'm thinking about, testing or taking apart.</span></p>
+    {% if site.posts.size > 0 %}
+    <ul class="note-list">
+        {% for post in site.posts %}
+        <li>
+            <a href="{{ post.url | relative_url }}">
+                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d/%m/%Y" }}</time>
+                <span class="t" lang="{{ post.lang | default: 'es' }}">{{ post.title }}</span>
+                {% if post.description %}<span class="d" lang="{{ post.lang | default: 'es' }}">{{ post.description }}</span>{% endif %}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p class="empty"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i>La primera nota todavía está en el banco de trabajo. Próximamente.</p>
+    {% endif %}
+</section>
