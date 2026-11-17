@@ -10,6 +10,7 @@ This is a personal GitHub Pages website for Nahuel Matias hosted at `matiasarauj
 
 - `index.html` - Main single-page application with embedded CSS and JavaScript
 - `assets/images/` - Profile photo (also used as the social preview image)
+- `assets/papers/` - Published papers linked from the Education section
 - `CNAME` - Custom domain configuration for `matiasaraujo.ar`
 - `LICENSE` - GNU General Public License v3.0
 

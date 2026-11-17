@@ -647,6 +647,31 @@
             color: var(--primary-cyan);
         }
 
+        .paper-meta {
+            font-size: 0.9rem;
+            margin-top: 0.35rem;
+        }
+
+        .paper-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--primary-cyan);
+            border-radius: 0.5rem;
+            color: var(--primary-cyan);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .paper-link:hover {
+            background: var(--primary-cyan);
+            color: var(--deep-space);
+        }
+
         .course-list {
             list-style: none;
             margin-top: 1.5rem;
@@ -947,7 +972,12 @@
                         </div>
                         <div class="project">
                             <p class="project-label" data-i18n="edu.utn.label">Publication</p>
-                            <p lang="es"><em>Evaluación y detección de potenciales evocados en una interfaz cerebro computadora</em></p>
+                            <p lang="es" class="paper-title"><em>Evaluación y detección de potenciales evocados sobre una interfaz cerebro computadora</em></p>
+                            <p class="paper-meta">M. Araujo, N. González, F. Pose · ARANDUCON 2016</p>
+                            <a href="assets/papers/araujo-2016-potenciales-evocados-bci.pdf" class="paper-link" target="_blank" rel="noopener">
+                                <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                                <span data-i18n="edu.utn.pdf">Read the paper (PDF)</span>
+                            </a>
                         </div>
                     </article>
                     <article class="edu-card">
@@ -1083,6 +1113,7 @@
                 "edu.mbt.desc": "Una plataforma de crowdfunding agropecuario pensada para que invertir en agro sea fácil, accesible y seguro: los inversores financian proyectos productivos verificados, como ganadería regenerativa, agricultura extensiva y nuez pecán, y los productores acceden a una nueva fuente de financiamiento. Llegamos hasta el modelo de negocio y la landing; no llegó a lanzarse.",
                 "edu.utn.title": "Ingeniería Electrónica",
                 "edu.utn.label": "Publicación",
+                "edu.utn.pdf": "Leer el paper (PDF)",
                 "edu.courses.title": "Cursos",
                 "edu.courses.defy": "Ecosistema Crypto &amp; DeFi 101",
                 "skills.title": "Skills y especialidades",
